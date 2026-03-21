@@ -1,0 +1,6 @@
+@TastyKitchens.API_HostAddress = http://localhost:5207
+
+GET {{TastyKitchens.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
