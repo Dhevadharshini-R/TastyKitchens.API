@@ -3,7 +3,7 @@
       "id": "f1",
       "restaurantId": "1",
       "name": "Big Mac",
-      "price": 250,
+      "cost": 250,
       "rating": 4.5,
       "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716207/Big_Mac_j82uaq.jpg"
     },
@@ -11,7 +11,7 @@
       "id": "f2",
       "restaurantId": "1",
       "name": "Chicken Nuggets",
-      "price": 180,
+      "cost": 180,
       "rating": 4.3,
       "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716162/Chicken_Nuggets_tujt0a.jpg"
     },
@@ -19,7 +19,7 @@
       "id": "f3",
       "restaurantId": "1",
       "name": "McChicken Sandwich",
-      "price": 210,
+      "cost": 210,
       "rating": 4.4,
       "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716294/McChicken_Sandwich_cq4n4y.jpg"
     },
@@ -27,7 +27,7 @@
       "id": "f4",
       "restaurantId": "1",
       "name": "French Fries",
-      "price": 150,
+      "cost": 150,
       "rating": 4.2,
       "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716250/French_Fries_vp3eds.jpg"
     },
@@ -35,7 +35,7 @@
       "id": "f5",
       "restaurantId": "2",
       "name": "Veg Cheese Roll",
-      "price": 140,
+      "cost": 140,
       "rating": 4.1,
       "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716715/Veg_Cheese_Roll1_qppf8n.jpg"
     },
@@ -43,7 +43,7 @@
       "id": "f6",
       "restaurantId": "2",
       "name": "Paneer Pocket",
-      "price": 170,
+      "cost": 170,
       "rating": 4.3,
       "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716312/Paneer_Pocket_w6tbtf.jpg"
     },
@@ -51,7 +51,7 @@
       "id": "f7",
       "restaurantId": "2",
       "name": "Crispy Corn Cup",
-      "price": 160,
+      "cost": 160,
       "rating": 4.0,
       "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716227/Crispy_Corn_Cup_uctwv3.jpg"
     },
@@ -59,7 +59,7 @@
       "id": "f8",
       "restaurantId": "2",
       "name": "Masala Potato Bites",
-      "price": 150,
+      "cost": 150,
       "rating": 4.2,
       "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716284/Masala_Potato_Bites_nrusjs.jpg"
     },
@@ -67,7 +67,7 @@
       "id": "f9",
       "restaurantId": "3",
       "name": "Italian BMT Sub",
-      "price": 220,
+      "cost": 220,
       "rating": 4.5,
       "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716273/Italian_BMT_Sub_pxxrtu.jpg"
     },
@@ -75,8 +75,1368 @@
       "id": "f10",
       "restaurantId": "3",
       "name": "Veggie Delight Sub",
-      "price": 200,
+      "cost": 200,
       "rating": 4.3,
       "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716134/Veggie_Delight_Sub_dgbx19.jpg"
-    }
+    },
+    {
+      "id": "f11",
+      "restaurantId": "3",
+      "name": "Chicken Teriyaki Sub",
+      "cost": 240,
+      "rating": 4.6,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716187/Chicken_Teriyaki_Sub_zvkqnc.jpg"
+    },
+    {
+      "id": "f12",
+      "restaurantId": "3",
+      "name": "Tuna Sandwich",
+      "cost": 230,
+      "rating": 4.4,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716357/Tuna_Sandwich_pgzuea.jpg"
+    },
+    {
+      "id": "f13",
+      "restaurantId": "4",
+      "name": "Veg Loaded Sandwich",
+      "cost": 180,
+      "rating": 4.1,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716363/Veg_Loaded_Sandwich_j2qntz.jpg"
+    },
+    {
+      "id": "f14",
+      "restaurantId": "4",
+      "name": "Paneer Burger",
+      "cost": 210,
+      "rating": 4.3,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716308/Paneer_Burger_jl3ase.jpg"
+    },
+    {
+      "id": "f15",
+      "restaurantId": "4",
+      "name": "Corn Cheese Balls",
+      "cost": 190,
+      "rating": 4.2,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716218/Corn_Cheese_Balls_sqlksf.jpg"
+    },
+    {
+      "id": "f16",
+      "restaurantId": "4",
+      "name": "Veg Crispy Wrap",
+      "cost": 200,
+      "rating": 4.4,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773732481/Veg_Crispy_Wrap_cz6ets.jpg"
+    },
+    {
+      "id": "f17",
+      "restaurantId": "5",
+      "name": "Pepperoni Pizza",
+      "cost": 320,
+      "rating": 4.6,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716329/Pepperoni_Pizza_ncr37k.jpg"
+    },
+    {
+      "id": "f18",
+      "restaurantId": "5",
+      "name": "Veg Supreme Pizza",
+      "cost": 300,
+      "rating": 4.5,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716364/Veg_Supreme_Pizza_owcdt1.jpg"
+    },
+    {
+      "id": "f19",
+      "restaurantId": "5",
+      "name": "Cheese Garlic Bread",
+      "cost": 190,
+      "rating": 4.3,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716237/Cheese_Garlic_Bread_yxvnvu.jpg"
+    },
+    {
+      "id": "f20",
+      "restaurantId": "5",
+      "name": "Chicken Tikka Pizza",
+      "cost": 340,
+      "rating": 4.7,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716184/Chicken_Tikka_Pizza_vvi4a4.jpg"
+    },
+    {
+        "id": "f21",
+        "restaurantId": "6",
+        "name": "Chocolate Sundae",
+        "cost": 160,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716202/Chocolate_Sundae_bkk0ag.jpg"
+      },
+      {
+        "id": "f22",
+        "restaurantId": "6",
+        "name": "Mango Ice Cream",
+        "cost": 140,
+        "rating": 4.2,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716279/Mango_Ice_Cream_zzzhwh.jpg"
+      },
+      {
+        "id": "f23",
+        "restaurantId": "6",
+        "name": "Strawberry Milkshake",
+        "cost": 170,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716354/Strawberry_Milkshake_jcouhd.jpg"
+      },
+      {
+        "id": "f24",
+        "restaurantId": "6",
+        "name": "Vanilla Soft Serve",
+        "cost": 130,
+        "rating": 4.1,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716357/Vanilla_Soft_Serve_emkbiz.jpg"
+      },
+      {
+        "id": "f25",
+        "restaurantId": "7",
+        "name": "Cheesy Nachos",
+        "cost": 150,
+        "rating": 4.2,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716243/Cheesy_Nachos_bvfxnf.jpg"
+      },
+      {
+        "id": "f26",
+        "restaurantId": "7",
+        "name": "Chicken Popcorn",
+        "cost": 210,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716159/Chicken_Popcorn_tzybgz.jpg"
+      },
+      {
+        "id": "f27",
+        "restaurantId": "7",
+        "name": "Jalapeno Bites",
+        "cost": 170,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716273/Jalapeno_Bites_rfxtsv.jpg"
+      },
+      {
+        "id": "f28",
+        "restaurantId": "7",
+        "name": "Stuffed Garlic Sticks",
+        "cost": 180,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716351/Stuffed_Garlic_Sticks_openht.jpg"
+      },
+      {
+        "id": "f29",
+        "restaurantId": "8",
+        "name": "Veg Fried Rice",
+        "cost": 190,
+        "rating": 4.2,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716362/Veg_Fried_Rice_dkc9gz.jpg"
+      },
+      {
+        "id": "f30",
+        "restaurantId": "8",
+        "name": "Veg Hakka Noodles",
+        "cost": 200,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716363/Veg_Hakka_Noodles_wivvm2.jpg"
+      },
+      {
+        "id": "f31",
+        "restaurantId": "8",
+        "name": "Paneer Manchurian",
+        "cost": 230,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716316/Paneer_Manchurian_agd5m9.jpg"
+      },
+      {
+        "id": "f32",
+        "restaurantId": "8",
+        "name": "Crispy Baby Corn",
+        "cost": 210,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716221/Crispy_Baby_Corn_t2drqj.jpg"
+      },
+      {
+        "id": "f33",
+        "restaurantId": "9",
+        "name": "Spaghetti Aglio e Olio",
+        "cost": 260,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716345/Spaghetti_Aglio_e_Olio_tjj0qg.jpg"
+      },
+      {
+        "id": "f34",
+        "restaurantId": "9",
+        "name": "Pasta Alfredo",
+        "cost": 270,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716328/Pasta_Alfredo_ha5tri.jpg"
+      },
+      {
+        "id": "f35",
+        "restaurantId": "9",
+        "name": "Lasagna",
+        "cost": 290,
+        "rating": 4.7,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716279/Lasagna_jyhdve.jpg"
+      },
+      {
+        "id": "f36",
+        "restaurantId": "9",
+        "name": "Penne Arrabiata",
+        "cost": 250,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716320/Penne_Arrabiata_vtmgxr.jpg"
+      },
+      {
+        "id": "f37",
+        "restaurantId": "10",
+        "name": "Original Recipe Chicken",
+        "cost": 320,
+        "rating": 4.7,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716311/Original_Recipe_Chicken_cnsfju.jpg"
+      },
+      {
+        "id": "f38",
+        "restaurantId": "10",
+        "name": "Zinger Burger",
+        "cost": 240,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716121/Zinger_Burger_ptymtj.jpg"
+      },
+      {
+        "id": "f39",
+        "restaurantId": "10",
+        "name": "Hot Wings",
+        "cost": 210,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716271/Hot_Wings_ts5et1.jpg"
+      },
+      {
+        "id": "f40",
+        "restaurantId": "10",
+        "name": "Chicken Bucket",
+        "cost": 450,
+        "rating": 4.8,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716248/Chicken_Bucket_iiak8i.jpg"
+    },
+    {
+        "id": "f41",
+        "restaurantId": "11",
+        "name": "Whopper",
+        "cost": 260,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716168/Whopper_m1rhjb.jpg"
+      },
+      {
+        "id": "f42",
+        "restaurantId": "11",
+        "name": "Chicken Royale",
+        "cost": 250,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716158/Chicken_Royale_aooiic.jpg"
+      },
+      {
+        "id": "f43",
+        "restaurantId": "11",
+        "name": "Onion Rings",
+        "cost": 160,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716308/Onion_Rings_fsjwwj.jpg"
+      },
+      {
+        "id": "f44",
+        "restaurantId": "11",
+        "name": "Veg Whopper",
+        "cost": 240,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716366/Veg_Whopper_kbpc7p.jpg"
+      },
+      {
+        "id": "f45",
+        "restaurantId": "12",
+        "name": "Margherita Pizza",
+        "cost": 280,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716285/Margherita_Pizza_m378xh.jpg"
+      },
+      {
+        "id": "f46",
+        "restaurantId": "12",
+        "name": "Farmhouse Pizza",
+        "cost": 320,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716253/Farmhouse_Pizza_cbf4fg.jpg"
+      },
+      {
+        "id": "f47",
+        "restaurantId": "12",
+        "name": "Chicken Dominator",
+        "cost": 360,
+        "rating": 4.7,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716245/Chicken_Dominator_abor6o.jpg"
+      },
+      {
+        "id": "f48",
+        "restaurantId": "12",
+        "name": "Garlic Breadsticks",
+        "cost": 180,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716259/Garlic_Breadsticks_f87jzg.jpg"
+      },
+      {
+        "id": "f49",
+        "restaurantId": "13",
+        "name": "Crunchy Taco",
+        "cost": 170,
+        "rating": 4.2,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716231/Crunchy_Taco_xh2mmi.jpg"
+      },
+      {
+        "id": "f50",
+        "restaurantId": "13",
+        "name": "Chicken Quesadilla",
+        "cost": 240,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716156/Chicken_Quesadilla_qkiya8.jpg"
+      },
+      {
+        "id": "f51",
+        "restaurantId": "13",
+        "name": "Burrito Supreme",
+        "cost": 260,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716222/Burrito_Supreme_pfbzf1.jpg"
+      },
+      {
+        "id": "f52",
+        "restaurantId": "13",
+        "name": "Nachos Bell Grande",
+        "cost": 220,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716302/Nachos_Bell_Grande_vnshyu.jpg"
+      },
+      {
+        "id": "f53",
+        "restaurantId": "14",
+        "name": "Cappuccino",
+        "cost": 190,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716225/Cappuccino_ju14ys.jpg"
+      },
+      {
+        "id": "f54",
+        "restaurantId": "14",
+        "name": "Latte",
+        "cost": 200,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716278/Latte_sgjhn5.jpg"
+      },
+      {
+        "id": "f55",
+        "restaurantId": "14",
+        "name": "Mocha",
+        "cost": 210,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716293/Mocha_u5izxb.jpg"
+      },
+      {
+        "id": "f56",
+        "restaurantId": "14",
+        "name": "Caramel Frappuccino",
+        "cost": 230,
+        "rating": 4.7,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716233/Caramel_Frappuccino_mmxpk4.jpg"
+      },
+      {
+        "id": "f57",
+        "restaurantId": "15",
+        "name": "Glazed Donut",
+        "cost": 120,
+        "rating": 4.2,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716257/Glazed_Donut_bf6o8w.jpg"
+      },
+      {
+        "id": "f58",
+        "restaurantId": "15",
+        "name": "Chocolate Donut",
+        "cost": 130,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716200/Chocolate_Donut_rbuysc.jpg"
+      },
+      {
+        "id": "f59",
+        "restaurantId": "15",
+        "name": "Blueberry Muffin",
+        "cost": 160,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716208/Blueberry_Muffin_ipecce.jpg"
+      },
+      {
+        "id": "f60",
+        "restaurantId": "15",
+        "name": "Croissant Sandwich",
+        "cost": 200,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716230/Croissant_Sandwich_pdrlwn.jpg"
+    },
+    {
+        "id": "f61",
+        "restaurantId": "16",
+        "name": "Cajun Chicken",
+        "cost": 260,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716226/Cajun_Chicken_dqp56o.jpg"
+      },
+      {
+        "id": "f62",
+        "restaurantId": "16",
+        "name": "Chicken Tenders",
+        "cost": 230,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716186/Chicken_Tenders_korokd.jpg"
+      },
+      {
+        "id": "f63",
+        "restaurantId": "16",
+        "name": "Cajun Fries",
+        "cost": 170,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716237/Cajun_Fries_dxe4an.jpg"
+      },
+      {
+        "id": "f64",
+        "restaurantId": "16",
+        "name": "Chicken Biscuit",
+        "cost": 210,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716241/Chicken_Biscuit_qcpzxm.jpg"
+      },
+      {
+        "id": "f65",
+        "restaurantId": "17",
+        "name": "Burrito Bowl",
+        "cost": 250,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716216/Burrito_Bowl_orhh2l.jpg"
+      },
+      {
+        "id": "f66",
+        "restaurantId": "17",
+        "name": "Chicken Tacos",
+        "cost": 220,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716193/Chicken_Tacos_qqyycv.jpg"
+      },
+      {
+        "id": "f67",
+        "restaurantId": "17",
+        "name": "Guacamole Bowl",
+        "cost": 240,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716267/Guacamole_Bowl_qjymyy.jpg"
+      },
+      {
+        "id": "f68",
+        "restaurantId": "17",
+        "name": "Steak Burrito",
+        "cost": 280,
+        "rating": 4.7,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716348/Steak_Burrito_suwyc3.jpg"
+      },
+      {
+        "id": "f69",
+        "restaurantId": "18",
+        "name": "Peri Peri Chicken",
+        "cost": 320,
+        "rating": 4.7,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716325/Peri_Peri_Chicken_o75ahi.jpg"
+      },
+      {
+        "id": "f70",
+        "restaurantId": "18",
+        "name": "Espetada Skewer",
+        "cost": 290,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716239/Espetada_Skewer_iq2utz.jpg"
+      },
+      {
+        "id": "f71",
+        "restaurantId": "18",
+        "name": "Chicken Wrap",
+        "cost": 230,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716194/Chicken_Wrap_bsj4tl.jpg"
+      },
+      {
+        "id": "f72",
+        "restaurantId": "18",
+        "name": "Garlic Bread",
+        "cost": 160,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716259/Garlic_Bread_hhduuo.jpg"
+      },
+      {
+        "id": "f73",
+        "restaurantId": "19",
+        "name": "BBQ Ribs",
+        "cost": 380,
+        "rating": 4.7,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716183/BBQ_Ribs_xuqv6s.jpg"
+      },
+      {
+        "id": "f74",
+        "restaurantId": "19",
+        "name": "Legendary Steak Burger",
+        "cost": 340,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716278/Legendary_Steak_Burger_t1gcer.jpg"
+      },
+      {
+        "id": "f75",
+        "restaurantId": "19",
+        "name": "Buffalo Wings",
+        "cost": 270,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716357/uffalo_Wings_rgqvkt.jpg"
+      },
+      {
+        "id": "f76",
+        "restaurantId": "19",
+        "name": "Pulled Pork Sandwich",
+        "cost": 300,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716332/Pulled_Pork_Sandwich_g9yr87.jpg"
+      },
+      {
+        "id": "f77",
+        "restaurantId": "20",
+        "name": "Fettuccine Alfredo",
+        "cost": 290,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716250/Fettuccine_Alfredo_gxntp9.jpg"
+      },
+      {
+        "id": "f78",
+        "restaurantId": "20",
+        "name": "Chicken Parmigiana",
+        "cost": 310,
+        "rating": 4.7,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716146/Chicken_Parmigiana_nex7gs.jpg"
+      },
+      {
+        "id": "f79",
+        "restaurantId": "20",
+        "name": "Minestrone Soup",
+        "cost": 190,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716290/Minestrone_Soup_x0adsl.jpg"
+      },
+      {
+        "id": "f80",
+        "restaurantId": "20",
+        "name": "Shrimp Scampi",
+        "cost": 330,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716339/Shrimp_Scampi_gh1d5p.jpg"
+    },
+    {
+        "id": "f81",
+        "restaurantId": "21",
+        "name": "Classic Cheesecake",
+        "cost": 220,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716213/Classic_Cheesecake_hxm4tl.jpg"
+      },
+      {
+        "id": "f82",
+        "restaurantId": "21",
+        "name": "Oreo Cheesecake",
+        "cost": 240,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716305/Oreo_Cheesecake_lmjsux.jpg"
+      },
+      {
+        "id": "f83",
+        "restaurantId": "21",
+        "name": "Red Velvet Cheesecake",
+        "cost": 250,
+        "rating": 4.7,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716334/Red_Velvet_Cheesecake_zlxfrq.jpg"
+      },
+      {
+        "id": "f84",
+        "restaurantId": "21",
+        "name": "Chocolate Truffle Cake",
+        "cost": 260,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716203/Chocolate_Truffle_Cake_sxpcci.jpg"
+      },
+      {
+        "id": "f85",
+        "restaurantId": "22",
+        "name": "Orange Chicken",
+        "cost": 260,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716304/Orange_Chicken_ed96y4.jpg"
+      },
+      {
+        "id": "f86",
+        "restaurantId": "22",
+        "name": "Beijing Beef",
+        "cost": 280,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716199/Beijing_Beef_f9rylw.jpg"
+      },
+      {
+        "id": "f87",
+        "restaurantId": "22",
+        "name": "Kung Pao Chicken",
+        "cost": 250,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716280/Kung_Pao_Chicken_l2nxne.jpg"
+      },
+      {
+        "id": "f88",
+        "restaurantId": "22",
+        "name": "Chow Mein",
+        "cost": 220,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716212/Chow_Mein_yqoo6z.jpg"
+      },
+      {
+        "id": "f89",
+        "restaurantId": "23",
+        "name": "Dynamite Shrimp",
+        "cost": 300,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716235/Dynamite_Shrimp_wvxm2s.jpg"
+      },
+      {
+        "id": "f90",
+        "restaurantId": "23",
+        "name": "Mongolian Beef",
+        "cost": 320,
+        "rating": 4.7,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716305/Mongolian_Beef_epcr8m.jpg"
+      },
+      {
+        "id": "f91",
+        "restaurantId": "23",
+        "name": "Chicken Lettuce Wraps",
+        "cost": 250,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716158/Chicken_Lettuce_Wraps_odxsde.jpg"
+      },
+      {
+        "id": "f92",
+        "restaurantId": "23",
+        "name": "Fried Dumplings",
+        "cost": 230,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716253/Fried_Dumplings_fdkcjh.jpg"
+      },
+      {
+        "id": "f93",
+        "restaurantId": "24",
+        "name": "Fajitas",
+        "cost": 280,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716245/Fajitas_iarb0c.jpg"
+      },
+      {
+        "id": "f94",
+        "restaurantId": "24",
+        "name": "Queso Dip",
+        "cost": 190,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716331/Queso_Dip_hofxpk.jpg"
+      },
+      {
+        "id": "f95",
+        "restaurantId": "24",
+        "name": "Loaded Nachos",
+        "cost": 220,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716288/Loaded_Nachos_bddc5i.jpg"
+      },
+      {
+        "id": "f96",
+        "restaurantId": "24",
+        "name": "Southwestern Eggrolls",
+        "cost": 240,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716340/Southwestern_Eggrolls_royw3k.jpg"
+      },
+      {
+        "id": "f97",
+        "restaurantId": "25",
+        "name": "Pancakes",
+        "cost": 180,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716319/Pancakes_goxh1g.jpg"
+      },
+      {
+        "id": "f98",
+        "restaurantId": "25",
+        "name": "Belgian Waffles",
+        "cost": 200,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716201/Belgian_Waffles_k3zznn.jpg"
+      },
+      {
+        "id": "f99",
+        "restaurantId": "25",
+        "name": "French Toast",
+        "cost": 190,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716257/French_Toast_kxsymd.jpg"
+      },
+      {
+        "id": "f100",
+        "restaurantId": "25",
+        "name": "Omelette",
+        "cost": 170,
+        "rating": 4.2,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716303/Omelette_anuryo.jpg"
+    },
+    {
+        "id": "f101",
+        "restaurantId": "26",
+        "name": "Grand Slam Breakfast",
+        "cost": 260,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716258/Grand_Slam_Breakfast_b48xuy.jpg"
+      },
+      {
+        "id": "f102",
+        "restaurantId": "26",
+        "name": "Hash Browns",
+        "cost": 140,
+        "rating": 4.2,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716269/Hash_Browns_ydg0sb.jpg"
+      },
+      {
+        "id": "f103",
+        "restaurantId": "26",
+        "name": "Club Sandwich",
+        "cost": 220,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716222/Club_Sandwich_xo2ajv.jpg"
+      },
+      {
+        "id": "f104",
+        "restaurantId": "26",
+        "name": "Meatloaf",
+        "cost": 240,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716295/Meatloaf_yrhuby.jpg"
+      },
+      {
+        "id": "f105",
+        "restaurantId": "27",
+        "name": "Bacon Cheeseburger",
+        "cost": 300,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716093/Bacon_Cheeseburger_zbz1pv.jpg"
+      },
+      {
+        "id": "f106",
+        "restaurantId": "27",
+        "name": "Veg Sandwich",
+        "cost": 190,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716362/Veg_Sandwich_yr85v5.jpg"
+      },
+      {
+        "id": "f107",
+        "restaurantId": "27",
+        "name": "Grilled Cheese Sandwich",
+        "cost": 210,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716263/Grilled_Cheese_Sandwich_sgo8hc.jpg"
+      },
+      {
+        "id": "f108",
+        "restaurantId": "27",
+        "name": "Cajun Fries",
+        "cost": 180,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716232/Cajun_Fries1_ipggfs.jpg"
+      },
+      {
+        "id": "f109",
+        "restaurantId": "28",
+        "name": "Timbits",
+        "cost": 150,
+        "rating": 4.2,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716352/Timbits_cs51jx.jpg"
+      },
+      {
+        "id": "f110",
+        "restaurantId": "28",
+        "name": "Maple Donut",
+        "cost": 160,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716285/Maple_Donut_s6kwym.jpg"
+      },
+      {
+        "id": "f111",
+        "restaurantId": "28",
+        "name": "Bagel Sandwich",
+        "cost": 200,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716177/Bagel_Sandwich_umsztz.jpg"
+      },
+      {
+        "id": "f112",
+        "restaurantId": "28",
+        "name": "Iced Capp",
+        "cost": 180,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716269/Iced_Capp_ongtyn.jpg"
+      },
+      {
+        "id": "f113",
+        "restaurantId": "29",
+        "name": "Chocolate Chip Ice Cream",
+        "cost": 190,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716198/Chocolate_Chip_Ice_Cream_e9bepa.jpg"
+      },
+      {
+        "id": "f114",
+        "restaurantId": "29",
+        "name": "Pralines n Cream",
+        "cost": 210,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716330/Pralines_n_Cream_o3lusx.jpg"
+      },
+      {
+        "id": "f115",
+        "restaurantId": "29",
+        "name": "Mint Chocolate Chip",
+        "cost": 200,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716294/Mint_Chocolate_Chip_ejgvme.jpg"
+      },
+      {
+        "id": "f116",
+        "restaurantId": "29",
+        "name": "Jamoca Almond Fudge",
+        "cost": 220,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716273/Jamoca_Almond_Fudge_r5qymo.jpg"
+      },
+      {
+        "id": "f117",
+        "restaurantId": "30",
+        "name": "Blizzard",
+        "cost": 230,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716212/Blizzard_navrja.jpg"
+      },
+      {
+        "id": "f118",
+        "restaurantId": "30",
+        "name": "Banana Split",
+        "cost": 210,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716177/Banana_Split_usgzpd.jpg"
+      },
+      {
+        "id": "f119",
+        "restaurantId": "30",
+        "name": "Ice Cream Cake",
+        "cost": 260,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716270/Ice_Cream_Cake_v1a22x.jpg"
+      },
+      {
+        "id": "f120",
+        "restaurantId": "30",
+        "name": "DQ Sundae",
+        "cost": 190,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716231/DQ_Sundae_cxrwjz.jpg"
+    },
+    {
+        "id": "f121",
+        "restaurantId": "31",
+        "name": "Raj Kachori",
+        "cost": 210,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716333/Raj_Kachori_apvkyi.jpg"
+      },
+      {
+        "id": "f122",
+        "restaurantId": "31",
+        "name": "Chole Bhature",
+        "cost": 230,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716207/Chole_Bhature_gc9wjo.jpg"
+      },
+      {
+        "id": "f123",
+        "restaurantId": "31",
+        "name": "Pav Bhaji",
+        "cost": 200,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716320/Pav_Bhaji_yltjau.jpg"
+      },
+      {
+        "id": "f124",
+        "restaurantId": "31",
+        "name": "Samosa Chaat",
+        "cost": 180,
+        "rating": 4.2,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716347/Samosa_Chaat_ahfkdk.jpg"
+      },
+      {
+        "id": "f125",
+        "restaurantId": "32",
+        "name": "Original Glazed Donut",
+        "cost": 150,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716308/Original_Glazed_Donut_njidgp.jpg"
+      },
+      {
+        "id": "f126",
+        "restaurantId": "32",
+        "name": "Chocolate Sprinkles Donut",
+        "cost": 160,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716212/Chocolate_Sprinkles_Donut_ryztld.jpg"
+      },
+      {
+        "id": "f127",
+        "restaurantId": "32",
+        "name": "Strawberry Filled Donut",
+        "cost": 170,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716350/Strawberry_Filled_Donut_zyx7tk.jpg"
+      },
+      {
+        "id": "f128",
+        "restaurantId": "32",
+        "name": "Lemon Filled Donut",
+        "cost": 165,
+        "rating": 4.2,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716277/Lemon_Filled_Donut_bpfylt.jpg"
+      },
+      {
+        "id": "f129",
+        "restaurantId": "33",
+        "name": "Masala Dosa",
+        "cost": 180,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716288/Masala_Dosa_vmkvkt.jpg"
+      },
+      {
+        "id": "f130",
+        "restaurantId": "33",
+        "name": "Idli Sambar",
+        "cost": 120,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716269/Idli_Sambar_psl3v3.jpg"
+      },
+      {
+        "id": "f131",
+        "restaurantId": "33",
+        "name": "Pongal",
+        "cost": 150,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716324/Pongal_ycblxi.jpg"
+      },
+      {
+        "id": "f132",
+        "restaurantId": "33",
+        "name": "Rava Kesari",
+        "cost": 140,
+        "rating": 4.3,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716345/Rava_Kesari_cv6ag5.jpg"
+      },
+      {
+        "id": "f133",
+        "restaurantId": "34",
+        "name": "Mini Tiffin",
+        "cost": 220,
+        "rating": 4.6,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716295/Mini_Tiffin_sqrd7u.jpg"
+      },
+      {
+        "id": "f134",
+        "restaurantId": "34",
+        "name": "Filter Coffee",
+        "cost": 90,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716250/Filter_Coffee_vpuwg8.jpg"
+      },
+      {
+        "id": "f135",
+        "restaurantId": "34",
+        "name": "Mysore Pak",
+        "cost": 160,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716299/Mysore_Pak_cqswqa.jpg"
+      },
+      {
+        "id": "f136",
+        "restaurantId": "34",
+        "name": "Badam Halwa",
+        "cost": 190,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716171/Badam_Halwa_hnbad4.jpg"
+      },
+      {
+        "id": "f137",
+        "restaurantId": "35",
+        "name": "Hyderabadi Chicken Biryani",
+        "cost": 320,
+        "rating": 4.7,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716267/Hyderabadi_Chicken_Biryani_dbf779.jpg"
+      },
+      {
+        "id": "f138",
+        "restaurantId": "35",
+        "name": "Mutton Biryani",
+        "cost": 360,
+        "rating": 4.8,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716301/Mutton_Biryan_oqdx6i.jpg"
+      },
+      {
+        "id": "f139",
+        "restaurantId": "35",
+        "name": "Egg Biryani",
+        "cost": 240,
+        "rating": 4.5,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716237/Egg_Biryani_zagoel.jpg"
+      },
+      {
+        "id": "f140",
+        "restaurantId": "35",
+        "name": "Veg Dum Biryani",
+        "cost": 220,
+        "rating": 4.4,
+        "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716359/Veg_Dum_Biryani_tjuawt.jpg"
+    },
+  {
+    "id": "f141",
+    "restaurantId": "36",
+    "name": "Chicken Tikka Wrap",
+    "cost": 210,
+    "rating": 4.5,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716183/Chicken_Tikka_Wrap_hjtnm4.jpg"
+  },
+  {
+    "id": "f142",
+    "restaurantId": "36",
+    "name": "Paneer Wrap",
+    "cost": 190,
+    "rating": 4.4,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716316/Paneer_Wrap_xcnatz.jpg"
+  },
+  {
+    "id": "f143",
+    "restaurantId": "36",
+    "name": "Egg Bhurji Wrap",
+    "cost": 180,
+    "rating": 4.3,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716237/Egg_Bhurji_Wrap_p8vprd.jpg"
+  },
+  {
+    "id": "f144",
+    "restaurantId": "36",
+    "name": "Chicken Shawarma Wrap",
+    "cost": 220,
+    "rating": 4.6,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716161/Chicken_Shawarma_Wrap_qmpnoi.jpg"
+  },
+  {
+    "id": "f145",
+    "restaurantId": "37",
+    "name": "Grilled Prawns",
+    "cost": 340,
+    "rating": 4.7,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716264/Grilled_Prawns_co4kci.jpg"
+  },
+  {
+    "id": "f146",
+    "restaurantId": "37",
+    "name": "Tandoori Chicken",
+    "cost": 310,
+    "rating": 4.6,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716357/Tandoori_Chicken_ru7phx.jpg"
+  },
+  {
+    "id": "f147",
+    "restaurantId": "37",
+    "name": "BBQ Paneer",
+    "cost": 240,
+    "rating": 4.4,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716189/BBQ_Paneer_xakpvt.jpg"
+  },
+  {
+    "id": "f148",
+    "restaurantId": "37",
+    "name": "Grilled Pineapple",
+    "cost": 170,
+    "rating": 4.3,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716263/Grilled_Pineapple_qy4ekb.jpg"
+  },
+  {
+    "id": "f149",
+    "restaurantId": "38",
+    "name": "Steamed Chicken Momos",
+    "cost": 180,
+    "rating": 4.5,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716350/Steamed_Chicken_Momos_nk7iqe.jpg"
+  },
+  {
+    "id": "f150",
+    "restaurantId": "38",
+    "name": "Fried Veg Momos",
+    "cost": 170,
+    "rating": 4.4,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716253/Fried_Veg_Momos_c6xuqy.jpg"
+  },
+  {
+    "id": "f151",
+    "restaurantId": "38",
+    "name": "Tandoori Momos",
+    "cost": 210,
+    "rating": 4.6,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716357/Tandoori_Momos_tyipuq.jpg"
+  },
+  {
+    "id": "f152",
+    "restaurantId": "38",
+    "name": "Pan Fried Momos",
+    "cost": 200,
+    "rating": 4.5,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716309/Pan_Fried_Momos_ga6mg8.jpg"
+  },
+  {
+    "id": "f153",
+    "restaurantId": "39",
+    "name": "Veggie Fantasy Pizza",
+    "cost": 290,
+    "rating": 4.5,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716165/Veggie_Fantasy_Pizza_d3h1se.jpg"
+  },
+  {
+    "id": "f154",
+    "restaurantId": "39",
+    "name": "Chicken Keema Pizza",
+    "cost": 320,
+    "rating": 4.6,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716248/Chicken_Keema_Pizza_l4bozs.jpg"
+  },
+  {
+    "id": "f155",
+    "restaurantId": "39",
+    "name": "Cheesy Bread",
+    "cost": 180,
+    "rating": 4.3,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716236/Cheesy_Bread_jz2jgg.jpg"
+  },
+  {
+    "id": "f156",
+    "restaurantId": "39",
+    "name": "Paneer Pizza",
+    "cost": 300,
+    "rating": 4.4,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716319/Paneer_Pizza_hmqrkf.jpg"
+  },
+  {
+    "id": "f157",
+    "restaurantId": "40",
+    "name": "Grilled Chicken Steak",
+    "cost": 330,
+    "rating": 4.6,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716264/Grilled_Chicken_Steak_g9fncu.jpg"
+  },
+  {
+    "id": "f158",
+    "restaurantId": "40",
+    "name": "Creamy Mushroom Pasta",
+    "cost": 260,
+    "rating": 4.5,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716218/Creamy_Mushroom_Pasta_qwanuw.jpg"
+  },
+  {
+    "id": "f159",
+    "restaurantId": "40",
+    "name": "Roasted Vegetables",
+    "cost": 210,
+    "rating": 4.3,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716338/Roasted_Vegetables_mudxua.jpg"
+  },
+  {
+    "id": "f160",
+    "restaurantId": "40",
+    "name": "Garlic Butter Rice",
+    "cost": 200,
+    "rating": 4.4,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716264/Garlic_Butter_Rice_pdkowe.jpg"
+  },
+  {
+    "id": "f161",
+    "restaurantId": "41",
+    "name": "Belgian Chocolate Waffle",
+    "cost": 220,
+    "rating": 4.6,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716190/Belgian_Chocolate_Waffle_zhzuh1.jpg"
+  },
+  {
+    "id": "f162",
+    "restaurantId": "41",
+    "name": "Nutella Waffle",
+    "cost": 240,
+    "rating": 4.7,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716300/Nutella_Waffle_kftusd.jpg"
+  },
+  {
+    "id": "f163",
+    "restaurantId": "41",
+    "name": "Strawberry Cream Waffle",
+    "cost": 230,
+    "rating": 4.5,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716349/Strawberry_Cream_Waffle_uyazae.jpg"
+  },
+  {
+    "id": "f164",
+    "restaurantId": "41",
+    "name": "Maple Syrup Waffle",
+    "cost": 210,
+    "rating": 4.4,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716285/Maple_Syrup_Waffle_hodork.jpg"
+  },
+  {
+    "id": "f165",
+    "restaurantId": "42",
+    "name": "Ferrero Rocher Ice Cream",
+    "cost": 260,
+    "rating": 4.7,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716247/Ferrero_Rocher_Ice_Cream_byf1k5.jpg"
+  },
+  {
+    "id": "f166",
+    "restaurantId": "42",
+    "name": "Brownie Fudge Ice Cream",
+    "cost": 250,
+    "rating": 4.6,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716212/Brownie_Fudge_Ice_Cream_fq3hri.jpg"
+  },
+  {
+    "id": "f167",
+    "restaurantId": "42",
+    "name": "KitKat Ice Cream",
+    "cost": 240,
+    "rating": 4.5,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716273/KitKat_Ice_Cream_aeaz0n.jpg"
+  },
+  {
+    "id": "f168",
+    "restaurantId": "42",
+    "name": "Fruit Overload Ice Cream",
+    "cost": 230,
+    "rating": 4.4,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716253/Fruit_Overload_Ice_Cream_lcwp8w.jpg"
+  },
+  {
+    "id": "f169",
+    "restaurantId": "43",
+    "name": "Nachos Platter",
+    "cost": 240,
+    "rating": 4.5,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716301/Nachos_Platter_ie16on.jpg"
+  },
+  {
+    "id": "f170",
+    "restaurantId": "43",
+    "name": "Chicken Sliders",
+    "cost": 260,
+    "rating": 4.6,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716172/Chicken_Sliders_hbnu9l.jpg"
+  },
+  {
+    "id": "f171",
+    "restaurantId": "43",
+    "name": "Paneer Tikka",
+    "cost": 230,
+    "rating": 4.4,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716315/Paneer_Tikka_buphh8.jpg"
+  },
+  {
+    "id": "f172",
+    "restaurantId": "43",
+    "name": "Crispy Calamari",
+    "cost": 280,
+    "rating": 4.6,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716224/Crispy_Calamari_fmfl8f.jpg"
+  },
+  {
+    "id": "f173",
+    "restaurantId": "44",
+    "name": "Falafel Wrap",
+    "cost": 200,
+    "rating": 4.4,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716241/Falafel_Wrap_nxmb2r.jpg"
+  },
+  {
+    "id": "f174",
+    "restaurantId": "44",
+    "name": "Lamb Wrap",
+    "cost": 260,
+    "rating": 4.6,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716277/Lamb_Wrap_oyqxdo.jpg"
+  },
+  {
+    "id": "f175",
+    "restaurantId": "44",
+    "name": "Veggie Hummus Wrap",
+    "cost": 210,
+    "rating": 4.3,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716167/Veggie_Hummus_Wrap_qcztqa.jpg"
+  },
+  {
+    "id": "f176",
+    "restaurantId": "44",
+    "name": "Grilled Chicken Wrap",
+    "cost": 240,
+    "rating": 4.5,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716265/Grilled_Chicken_Wrap_amyhad.jpg"
+  },
+  {
+    "id": "f177",
+    "restaurantId": "45",
+    "name": "Black Forest Cake",
+    "cost": 320,
+    "rating": 4.6,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716206/Black_Forest_Cake_ivajvq.jpg"
+  },
+  {
+    "id": "f178",
+    "restaurantId": "45",
+    "name": "Butterscotch Cake",
+    "cost": 300,
+    "rating": 4.5,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716226/Butterscotch_Cake_uumbdv.jpg"
+  },
+  {
+    "id": "f179",
+    "restaurantId": "45",
+    "name": "Pineapple Cake",
+    "cost": 290,
+    "rating": 4.4,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716370/Pineapple_Cake_ldgqwh.png"
+  },
+  {
+    "id": "f180",
+    "restaurantId": "45",
+    "name": "Chocolate Lava Cake",
+    "cost": 260,
+    "rating": 4.6,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716200/Chocolate_Lava_Cake_lrirvf.jpg"
+  }
   ]

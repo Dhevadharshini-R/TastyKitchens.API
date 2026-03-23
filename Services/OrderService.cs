@@ -35,14 +35,14 @@ public class OrderService
                 throw new Exception($"Food item {item.FoodItemId} not found");
             }
 
-            var itemTotal = food.Price * item.Quantity;
+            var itemTotal = food.Cost * item.Quantity;
             totalAmount += itemTotal;
 
             orderItems.Add(new OrderItem
             {
                 FoodItemId = food.Id,
                 Quantity = item.Quantity,
-                UnitPrice = food.Price
+                UnitCost = food.Cost
             });
         }
 
