@@ -1,0 +1,82 @@
+[
+    {
+      "id": "f1",
+      "restaurantId": "1",
+      "name": "Big Mac",
+      "price": 250,
+      "rating": 4.5,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716207/Big_Mac_j82uaq.jpg"
+    },
+    {
+      "id": "f2",
+      "restaurantId": "1",
+      "name": "Chicken Nuggets",
+      "price": 180,
+      "rating": 4.3,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716162/Chicken_Nuggets_tujt0a.jpg"
+    },
+    {
+      "id": "f3",
+      "restaurantId": "1",
+      "name": "McChicken Sandwich",
+      "price": 210,
+      "rating": 4.4,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716294/McChicken_Sandwich_cq4n4y.jpg"
+    },
+    {
+      "id": "f4",
+      "restaurantId": "1",
+      "name": "French Fries",
+      "price": 150,
+      "rating": 4.2,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716250/French_Fries_vp3eds.jpg"
+    },
+    {
+      "id": "f5",
+      "restaurantId": "2",
+      "name": "Veg Cheese Roll",
+      "price": 140,
+      "rating": 4.1,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716715/Veg_Cheese_Roll1_qppf8n.jpg"
+    },
+    {
+      "id": "f6",
+      "restaurantId": "2",
+      "name": "Paneer Pocket",
+      "price": 170,
+      "rating": 4.3,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716312/Paneer_Pocket_w6tbtf.jpg"
+    },
+    {
+      "id": "f7",
+      "restaurantId": "2",
+      "name": "Crispy Corn Cup",
+      "price": 160,
+      "rating": 4.0,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716227/Crispy_Corn_Cup_uctwv3.jpg"
+    },
+    {
+      "id": "f8",
+      "restaurantId": "2",
+      "name": "Masala Potato Bites",
+      "price": 150,
+      "rating": 4.2,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716284/Masala_Potato_Bites_nrusjs.jpg"
+    },
+    {
+      "id": "f9",
+      "restaurantId": "3",
+      "name": "Italian BMT Sub",
+      "price": 220,
+      "rating": 4.5,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716273/Italian_BMT_Sub_pxxrtu.jpg"
+    },
+    {
+      "id": "f10",
+      "restaurantId": "3",
+      "name": "Veggie Delight Sub",
+      "price": 200,
+      "rating": 4.3,
+      "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716134/Veggie_Delight_Sub_dgbx19.jpg"
+    }
+  ]
