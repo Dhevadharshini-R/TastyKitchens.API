@@ -29,6 +29,14 @@ public static partial class FakeDb
             PasswordHash = BCrypt.Net.BCrypt.HashPassword("123456"), 
             Role = "SuperAdmin" 
         });
+        Users.Add(new User 
+        { 
+            Id = 3, 
+            Username = "user", 
+            Email = "user@test.com", 
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword("123456"), 
+            Role = "User" 
+        });
     }
 
     static partial void InitializeRestaurants();

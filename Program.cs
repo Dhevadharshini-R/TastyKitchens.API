@@ -1,3 +1,4 @@
+using TastyKitchens.API.Middleware;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using TastyKitchens.API.Services;
@@ -45,14 +46,18 @@ builder.Services.AddAuthentication("Bearer")
         {
             ValidateIssuer = true,
             ValidateAudience = true,
+            ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(key)
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+            ClockSkew = TimeSpan.Zero
         };
     });
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseSwagger();
 app.UseSwaggerUI();
