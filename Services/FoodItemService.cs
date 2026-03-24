@@ -24,7 +24,7 @@ public class FoodItemService
             Name = dto.Name,
             Cost = dto.Cost,
             ImageUrl = dto.ImageUrl,
-            Rating = 0 // Default for new items
+            Rating = dto.Rating
         };
         FakeDb.FoodItems.Add(foodItem);
         return foodItem;
@@ -38,6 +38,7 @@ public class FoodItemService
         existing.Name = dto.Name;
         existing.Cost = dto.Cost;
         existing.ImageUrl = dto.ImageUrl;
+        if (dto.Rating > 0) existing.Rating = dto.Rating;
 
         return existing;
     }

@@ -16,4 +16,7 @@ public class CreateFoodItemDto
 
     [Required]
     public string ImageUrl { get; set; }
+
+    [Range(0, 5)]
+    public double Rating { get; set; } = 0;
 }

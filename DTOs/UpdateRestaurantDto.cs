@@ -18,4 +18,16 @@ public class UpdateRestaurantDto
 
     [Range(1, 10000)]
     public int CostForTwo { get; set; }
+
+    public string DeliveryTime { get; set; }
+
+    public string Distance { get; set; }
+
+    public bool IsOpen { get; set; }
+
+    [Range(0, 5)]
+    public double Rating { get; set; }
+
+    [Range(0, int.MaxValue)]
+    public int TotalReviews { get; set; }
 }

@@ -43,3 +43,4 @@ C:\TastyKitchens.API\TastyKitchens.API\bin\Debug\net10.0\TastyKitchens.API.runti
 C:\TastyKitchens.API\TastyKitchens.API\bin\Debug\net10.0\TastyKitchens.API.pdb
 C:\TastyKitchens.API\TastyKitchens.API\obj\Debug\net10.0\TastyKitchens.API.genruntimeconfig.cache
 C:\TastyKitchens.API\TastyKitchens.API\obj\Debug\net10.0\ref\TastyKitchens.API.dll
+C:\TastyKitchens.API\TastyKitchens.API\bin\Debug\net10.0\TastyKitchens.API.staticwebassets.runtime.json
