@@ -5,21 +5,21 @@ using TastyKitchens.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ✅ Controllers
+// Controllers
 builder.Services.AddControllers();
 
-// ✅ Swagger
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// ✅ Services
+// Services
 builder.Services.AddScoped<JwtService>();
 builder.Services.AddScoped<AuthService>();
 
-// ✅ Authorization
+// Authorization
 builder.Services.AddAuthorization();
 
-// ✅ JWT Authentication
+// JWT Authentication
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -40,15 +40,14 @@ builder.Services.AddAuthentication(options =>
 
 var app = builder.Build();
 
+// 🔥 IMPORTANT ORDER
 
-// 🔥 IMPORTANT ORDER (DON’T CHANGE THIS)
+app.UseStaticFiles(); // for images
 
-app.UseStaticFiles();   // ✅ image access
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseAuthentication();
-app.UseAuthentication();
+app.UseAuthentication(); // only once
 app.UseAuthorization();
 
 app.MapControllers();

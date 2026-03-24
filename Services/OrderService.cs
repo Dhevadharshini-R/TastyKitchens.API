@@ -21,7 +21,6 @@ public class OrderService
     public Order PlaceOrder(CreateOrderRequest request)
     {
         var foodItems = FileHelper.ReadFromFile<FoodItem>(foodItemsPath);
-        Console.WriteLine($"FoodItems count: {foodItems.Count}");
 
         var orderItems = new List<OrderItem>();
         decimal totalAmount = 0;
@@ -35,14 +34,15 @@ public class OrderService
                 throw new Exception($"Food item {item.FoodItemId} not found");
             }
 
-            var itemTotal = food.Cost * item.Quantity;
+            // 🔥 FIXED (Price instead of Cost)
+            var itemTotal = food.Price * item.Quantity;
             totalAmount += itemTotal;
 
             orderItems.Add(new OrderItem
             {
                 FoodItemId = food.Id,
                 Quantity = item.Quantity,
-                UnitCost = food.Cost
+                UnitPrice = food.Price // 🔥 FIXED
             });
         }
 

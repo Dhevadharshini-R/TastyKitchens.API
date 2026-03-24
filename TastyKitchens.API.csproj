@@ -6,22 +6,31 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <!-- Existing packages -->
   <ItemGroup>
-    <PackageReference Include="BCrypt.Net-Next" Version="4.1.0" />
+    <!-- 🔐 Auth -->
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.5" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.0.1" />
+
+    <!-- 🔐 JWT -->
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.16.0" />
+
+    <!-- 🔑 Password Hash -->
+    <PackageReference Include="BCrypt.Net-Next" Version="4.1.0" />
+
+    <!-- 📘 Swagger -->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.0.1" />
   </ItemGroup>
 
-  <!-- 🔥 ADD THIS BELOW -->
+  <!-- 📂 JSON files copy to output -->
   <ItemGroup>
     <None Update="Data/orders.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
 
     <None Update="Data/fooditems.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+
+    <None Update="Data/restaurants.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
