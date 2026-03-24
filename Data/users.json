@@ -19,5 +19,12 @@
     "Email": "user@test.com",
     "PasswordHash": "$2a$11$fGR5ffwvI5PKpwW2.4lqf.YHaZ9qWybauVre75T4B8vDBOwBHDu.G",
     "Role": "User"
+  },
+  {
+    "Id": 4,
+    "Username": "Dheva",
+    "Email": "Dheva@gmail.com",
+    "PasswordHash": "$2a$11$WXpjfYPIXhRQgHcovN0JlOQg5NTibrU3jkYYXM4OLJv4WBLQXIJoq",
+    "Role": "User"
   }
 ]

@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Controllers
 builder.Services.AddControllers();
 
-// Swagger
+// Swagger (SIMPLE)
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -40,14 +40,12 @@ builder.Services.AddAuthentication(options =>
 
 var app = builder.Build();
 
-// 🔥 IMPORTANT ORDER
-
-app.UseStaticFiles(); // for images
+app.UseStaticFiles();
 
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseAuthentication(); // only once
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

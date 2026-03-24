@@ -8,6 +8,7 @@ public class OrderService
 {
     private readonly string ordersPath;
     private readonly string foodItemsPath;
+    private readonly string restaurantsPath;
 
     public OrderService()
     {
@@ -15,12 +16,14 @@ public class OrderService
 
         ordersPath = Path.Combine(basePath, "Data", "orders.json");
         foodItemsPath = Path.Combine(basePath, "Data", "fooditems.json");
+        restaurantsPath = Path.Combine(basePath, "Data", "restaurants.json");
     }
 
-    // ✅ PLACE ORDER
+    // ✅ PLACE ORDER (WITH RESTAURANT CHECK)
     public Order PlaceOrder(CreateOrderRequest request)
     {
         var foodItems = FileHelper.ReadFromFile<FoodItem>(foodItemsPath);
+        var restaurants = FileHelper.ReadFromFile<Restaurant>(restaurantsPath);
 
         var orderItems = new List<OrderItem>();
         decimal totalAmount = 0;
@@ -30,11 +33,17 @@ public class OrderService
             var food = foodItems.FirstOrDefault(f => f.Id == item.FoodItemId);
 
             if (food == null)
-            {
                 throw new Exception($"Food item {item.FoodItemId} not found");
-            }
 
-            // 🔥 FIXED (Price instead of Cost)
+            var restaurant = restaurants.FirstOrDefault(r => r.Id.ToString() == food.RestaurantId);
+
+            if (restaurant == null)
+                throw new Exception("Restaurant not found");
+
+            // ❌ BUSINESS RULE: RESTAURANT CLOSED
+            if (!restaurant.IsOpen)
+                throw new Exception($"Restaurant {restaurant.Name} is closed");
+
             var itemTotal = food.Price * item.Quantity;
             totalAmount += itemTotal;
 
@@ -42,7 +51,7 @@ public class OrderService
             {
                 FoodItemId = food.Id,
                 Quantity = item.Quantity,
-                UnitPrice = food.Price // 🔥 FIXED
+                UnitPrice = food.Price
             });
         }
 
@@ -63,11 +72,17 @@ public class OrderService
         return newOrder;
     }
 
-    // ✅ GET USER ORDERS
+    // ✅ USER ORDERS
     public List<Order> GetUserOrders(string userId)
     {
         var orders = FileHelper.ReadFromFile<Order>(ordersPath);
         return orders.Where(o => o.UserId == userId).ToList();
+    }
+
+    // ✅ ADMIN → ALL ORDERS
+    public List<Order> GetAllOrders()
+    {
+        return FileHelper.ReadFromFile<Order>(ordersPath);
     }
 
     // ✅ UPDATE ORDER STATUS
@@ -78,14 +93,14 @@ public class OrderService
         var order = orders.FirstOrDefault(o => o.Id == orderId);
 
         if (order == null)
-        {
             throw new Exception("Order not found");
-        }
+
+        // ❌ BUSINESS RULE: NO UPDATE AFTER DELIVERY
+        if (order.Status == "Delivered")
+            throw new Exception("Order already delivered. Cannot update.");
 
         if (!IsValidStatusTransition(order.Status, newStatus))
-        {
             throw new Exception($"Invalid status transition from {order.Status} to {newStatus}");
-        }
 
         order.Status = newStatus;
 
@@ -94,7 +109,7 @@ public class OrderService
         return order;
     }
 
-    // ✅ VALIDATION LOGIC
+    // ✅ STATUS FLOW
     private bool IsValidStatusTransition(string current, string next)
     {
         return current switch
