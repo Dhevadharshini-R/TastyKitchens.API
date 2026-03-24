@@ -1,0 +1,18 @@
+﻿
+--- 1. Login as User ---
+User Token acquired!
+
+--- 2. Place Order as User ---
+Placed Order ID: ORD639099859938458142 - Status: Placed - Total: ₹680
+
+--- 3. Get My Orders (User) ---
+User has 2 order(s).
+
+--- 4. Login as Admin ---
+Admin Token acquired!
+
+--- 5. Get All Orders (Admin) ---
+Total orders in system: 4
+
+--- 6. Update Order Status (Admin) ---
+Order ORD639099859938458142 status changed to: Preparing

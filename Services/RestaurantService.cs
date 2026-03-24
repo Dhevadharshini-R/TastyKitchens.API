@@ -1,47 +1,33 @@
 using TastyKitchens.API.Models;
 using TastyKitchens.API.DTOs;
-using TastyKitchens.API.Helpers;
+using TastyKitchens.API.Data;
 
 namespace TastyKitchens.API.Services;
 
 public class RestaurantService
 {
-    private readonly string path;
-    private readonly string foodPath;
-
-    public RestaurantService()
-    {
-        var basePath = Directory.GetCurrentDirectory();
-        path = Path.Combine(basePath, "Data", "restaurants.json");
-        foodPath = Path.Combine(basePath, "Data", "fooditems.json");
-    }
-
     // ✅ GET ALL
     public List<Restaurant> GetAll()
     {
-        return FileHelper.ReadFromFile<Restaurant>(path);
+        return FakeDb.Restaurants;
     }
 
     // ✅ GET BY ID
     public Restaurant GetById(int id)
     {
-        var restaurants = FileHelper.ReadFromFile<Restaurant>(path);
-        return restaurants.FirstOrDefault(r => r.Id == id);
+        return FakeDb.Restaurants.FirstOrDefault(r => r.Id == id);
     }
 
     // ✅ GET FOOD ITEMS
     public List<FoodItem> GetFoodItemsByRestaurant(int restaurantId)
     {
-        var foods = FileHelper.ReadFromFile<FoodItem>(foodPath);
-        return foods.Where(f => f.RestaurantId == restaurantId.ToString()).ToList();
+        return FakeDb.FoodItems.Where(f => f.RestaurantId == restaurantId.ToString()).ToList();
     }
 
     // ✅ CREATE
     public Restaurant AddRestaurant(CreateRestaurantDto dto)
     {
-        var restaurants = FileHelper.ReadFromFile<Restaurant>(path);
-
-        var newId = restaurants.Any() ? restaurants.Max(r => r.Id) + 1 : 1;
+        var newId = FakeDb.Restaurants.Any() ? FakeDb.Restaurants.Max(r => r.Id) + 1 : 1;
 
         var restaurant = new Restaurant
         {
@@ -58,8 +44,8 @@ public class RestaurantService
             TotalReviews = 0
         };
 
-        restaurants.Add(restaurant);
-        FileHelper.WriteToFile(path, restaurants);
+        FakeDb.Restaurants.Add(restaurant);
+        FakeDb.SaveRestaurants(); // 🔥 SAVE
 
         return restaurant;
     }
@@ -67,9 +53,7 @@ public class RestaurantService
     // ✅ UPDATE
     public Restaurant UpdateRestaurant(int id, UpdateRestaurantDto dto)
     {
-        var restaurants = FileHelper.ReadFromFile<Restaurant>(path);
-
-        var existing = restaurants.FirstOrDefault(r => r.Id == id);
+        var existing = FakeDb.Restaurants.FirstOrDefault(r => r.Id == id);
         if (existing == null) return null;
 
         existing.Name = dto.Name;
@@ -78,7 +62,7 @@ public class RestaurantService
         existing.Location = dto.Location;
         existing.CostForTwo = dto.CostForTwo;
 
-        FileHelper.WriteToFile(path, restaurants);
+        FakeDb.SaveRestaurants(); // 🔥 SAVE
 
         return existing;
     }
@@ -86,13 +70,11 @@ public class RestaurantService
     // ✅ DELETE
     public bool DeleteRestaurant(int id)
     {
-        var restaurants = FileHelper.ReadFromFile<Restaurant>(path);
-
-        var restaurant = restaurants.FirstOrDefault(r => r.Id == id);
+        var restaurant = FakeDb.Restaurants.FirstOrDefault(r => r.Id == id);
         if (restaurant == null) return false;
 
-        restaurants.Remove(restaurant);
-        FileHelper.WriteToFile(path, restaurants);
+        FakeDb.Restaurants.Remove(restaurant);
+        FakeDb.SaveRestaurants(); // 🔥 SAVE
 
         return true;
     }
