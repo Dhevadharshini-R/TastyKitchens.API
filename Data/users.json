@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "Username": "admin",
+    "Email": "admin@test.com",
+    "PasswordHash": "$2a$11$pvRiQ6obUrXsbxW5ylb1tuucJrm6LT.n4sQiuwisjGHWwveKiCv2m",
+    "Role": "Admin"
+  },
+  {
+    "Id": 2,
+    "Username": "superadmin",
+    "Email": "super@test.com",
+    "PasswordHash": "$2a$11$wB5gbCDYTFKJdbiOFusiGexQEZDTTPqDMQCqyDiKw248WAWgE68li",
+    "Role": "SuperAdmin"
+  },
+  {
+    "Id": 3,
+    "Username": "User",
+    "Email": "user@test.com",
+    "PasswordHash": "$2a$11$fGR5ffwvI5PKpwW2.4lqf.YHaZ9qWybauVre75T4B8vDBOwBHDu.G",
+    "Role": "User"
+  }
+]
