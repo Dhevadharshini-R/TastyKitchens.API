@@ -10,7 +10,8 @@
       "distance": "2.1 km",
       "isOpen": true,
       "rating": 4.6,
-      "totalReviews": 132
+      "totalReviews": 132,
+      "adminEmail": "admin@test.com"
     },
     {
       "id": 2,
@@ -23,7 +24,8 @@
       "distance": "1.8 km",
       "isOpen": false,
       "rating": 4.9,
-      "totalReviews": 362
+      "totalReviews": 362,
+      "adminEmail": "admin1@test.com"
     },
     {
       "id": 3,
