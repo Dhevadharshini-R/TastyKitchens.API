@@ -2,6 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 using TastyKitchens.API.Services;
 using TastyKitchens.API.DTOs;
 
+// 🔥 ADDED
+using Microsoft.AspNetCore.Authorization;
+
 namespace TastyKitchens.API.Controllers;
 
 [ApiController]
@@ -35,6 +38,8 @@ public class FoodItemsController : ControllerBase
     }
 
     // ✅ CREATE
+    // 🔥 ADDED AUTHORIZATION
+    [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpPost]
     public IActionResult Create(CreateFoodItemDto dto)
     {
@@ -43,6 +48,8 @@ public class FoodItemsController : ControllerBase
     }
 
     // ✅ UPDATE
+    // 🔥 ADDED AUTHORIZATION
+    [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpPut("{id}")]
     public IActionResult Update(string id, UpdateFoodItemDto dto)
     {
@@ -55,6 +62,8 @@ public class FoodItemsController : ControllerBase
     }
 
     // ✅ DELETE
+    // 🔥 ADDED AUTHORIZATION
+    [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpDelete("{id}")]
     public IActionResult Delete(string id)
     {

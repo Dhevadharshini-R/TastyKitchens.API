@@ -21,7 +21,7 @@
       "costForTwo": 300,
       "deliveryTime": "25 mins",
       "distance": "1.8 km",
-      "isOpen": true,
+      "isOpen": false,
       "rating": 4.9,
       "totalReviews": 362
     },

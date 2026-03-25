@@ -1358,21 +1358,5 @@
     "Price": 260,
     "Rating": 4.6,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716200/Chocolate_Lava_Cake_lrirvf.jpg"
-  },
-  {
-    "Id": "f171",
-    "RestaurantId": "5",
-    "Name": "veg noodles",
-    "Price": 120,
-    "Rating": 0,
-    "ImageUrl": "/images/restaurants/eeebd1ff-137a-4639-bcd7-20f4e326a628.jpg"
-  },
-  {
-    "Id": "f172",
-    "RestaurantId": "46",
-    "Name": "veg noodles",
-    "Price": 120,
-    "Rating": 0,
-    "ImageUrl": "/images/restaurants/eeebd1ff-137a-4639-bcd7-20f4e326a628.jpg"
   }
 ]

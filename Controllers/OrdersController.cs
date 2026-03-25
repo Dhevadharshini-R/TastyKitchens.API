@@ -19,17 +19,16 @@ public class OrdersController : ControllerBase
     }
 
     // ✅ PLACE ORDER
+    [Authorize(Roles = "User")]
     [HttpPost]
     public IActionResult PlaceOrder(CreateOrderRequest request)
     {
         try
         {
-            // 🔥 TAKE USER FROM TOKEN (NO MANUAL USERID)
             var email = User.FindFirst(ClaimTypes.Email)?.Value;
 
-            request.UserId = email;
+            var order = _orderService.PlaceOrder(request, email); // 🔥 CHANGE
 
-            var order = _orderService.PlaceOrder(request);
             return Ok(order);
         }
         catch (Exception ex)
@@ -48,16 +47,24 @@ public class OrdersController : ControllerBase
         return Ok(orders);
     }
 
-    // ✅ ADMIN → ALL ORDERS
-    [Authorize(Roles = "Admin,SuperAdmin")]
+    // ✅ ADMIN / SUPERADMIN
     [HttpGet("all")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public IActionResult GetAllOrders()
     {
-        var orders = _orderService.GetAllOrders();
+        var role = User.FindFirst(ClaimTypes.Role)?.Value;
+        var email = User.FindFirst(ClaimTypes.Email)?.Value;
+
+        if (role == "SuperAdmin")
+        {
+            return Ok(_orderService.GetAllOrders());
+        }
+
+        var orders = _orderService.GetOrdersByAdmin(email);
         return Ok(orders);
     }
 
-    // ✅ UPDATE STATUS (ADMIN ONLY)
+    // ✅ UPDATE STATUS
     [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpPut("{orderId}/status")]
     public IActionResult UpdateStatus(string orderId, [FromQuery] string status)

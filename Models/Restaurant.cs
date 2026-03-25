@@ -23,4 +23,6 @@ public class Restaurant
     public double Rating { get; set; }
 
     public int TotalReviews { get; set; }
+    
+    public string AdminEmail { get; set; } = string.Empty;
 }

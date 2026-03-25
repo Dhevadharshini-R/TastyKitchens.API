@@ -26,5 +26,12 @@
     "Email": "Dheva@gmail.com",
     "PasswordHash": "$2a$11$WXpjfYPIXhRQgHcovN0JlOQg5NTibrU3jkYYXM4OLJv4WBLQXIJoq",
     "Role": "User"
+  },
+  {
+    "Id": 5,
+    "Username": "Sri",
+    "Email": "Sri@gmail.com",
+    "PasswordHash": "$2a$11$bOH2bvg7uILhGVcdnqBs7.WCHu9K8r/GdqgDLHYc3/RkUgO5/l1Ta",
+    "Role": "User"
   }
 ]

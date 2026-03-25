@@ -26,5 +26,26 @@
     "Email": "Dheva@gmail.com",
     "PasswordHash": "$2a$11$WXpjfYPIXhRQgHcovN0JlOQg5NTibrU3jkYYXM4OLJv4WBLQXIJoq",
     "Role": "User"
+  },
+  {
+    "Id": 5,
+    "Username": "Sri",
+    "Email": "Sri@gmail.com",
+    "PasswordHash": "$2a$11$3HrVc0v0fb0HErGSsk3K4.lUBu0oNdMX4kuMpB0m54lgWEz87rqsG",
+    "Role": "User"
+  },
+  {
+    "Id": 6,
+    "Username": "Bala",
+    "Email": "Bala@gmail.com",
+    "PasswordHash": "$2a$11$G4jb7/EopPh0m/TuHjWrc.X793FN.Slx6777DWeH0W2pDI1RQZzrS",
+    "Role": "User"
+  },
+  {
+    "Id": 7,
+    "Username": "Admin1",
+    "Email": "admin1@test.com",
+    "PasswordHash": "$2a$11$gujTfWkR43Mv0f2pMgbQsOEp2dPbvnFi9UdHql8qI/qgOjfbYxAOe",
+    "Role": "Admin"
   }
 ]

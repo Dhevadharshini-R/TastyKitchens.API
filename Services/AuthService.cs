@@ -20,12 +20,14 @@ namespace TastyKitchens.API.Services
                 Username = dto.Username,
                 Email = dto.Email,
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password),
-                Role = "User"
+
+                // 🔥 ROLE SUPPORT (ADDED)
+                Role = string.IsNullOrEmpty(dto.Role) ? "User" : dto.Role
             };
 
             FakeDb.Users.Add(user);
 
-            // 🔥 IMPORTANT FIX (SAVE TO FILE)
+            // 🔥 SAVE USERS TO FILE
             FakeDb.SaveUsers();
 
             return user;

@@ -2,7 +2,6 @@ namespace TastyKitchens.API.DTOs;
 
 public class CreateOrderRequest
 {
-    public string UserId { get; set; } = string.Empty;
     public List<CreateOrderItem> Items { get; set; } = new();
 }
 

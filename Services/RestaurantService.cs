@@ -41,7 +41,10 @@ public class RestaurantService
             Distance = "2.5 km",
             IsOpen = true,
             Rating = 0,
-            TotalReviews = 0
+            TotalReviews = 0,
+
+            // 🔥 ADDED (IMPORTANT)
+            AdminEmail = "admin@test.com"
         };
 
         FakeDb.Restaurants.Add(restaurant);

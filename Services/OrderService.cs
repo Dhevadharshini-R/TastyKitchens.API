@@ -19,14 +19,17 @@ public class OrderService
         restaurantsPath = Path.Combine(basePath, "Data", "restaurants.json");
     }
 
-    // ✅ PLACE ORDER (WITH RESTAURANT CHECK)
-    public Order PlaceOrder(CreateOrderRequest request)
+    // ✅ PLACE ORDER (FIXED)
+    public Order PlaceOrder(CreateOrderRequest request, string email)
     {
         var foodItems = FileHelper.ReadFromFile<FoodItem>(foodItemsPath);
         var restaurants = FileHelper.ReadFromFile<Restaurant>(restaurantsPath);
 
         var orderItems = new List<OrderItem>();
         decimal totalAmount = 0;
+
+        // 🔥 ADDITION 1: SINGLE RESTAURANT VALIDATION
+        string? restaurantId = null;
 
         foreach (var item in request.Items)
         {
@@ -40,9 +43,19 @@ public class OrderService
             if (restaurant == null)
                 throw new Exception("Restaurant not found");
 
-            // ❌ BUSINESS RULE: RESTAURANT CLOSED
+            // 🔥 ADDITION 2: CLOSED RESTAURANT CHECK (ALREADY YOUR LOGIC - ENHANCED MESSAGE)
             if (!restaurant.IsOpen)
-                throw new Exception($"Restaurant {restaurant.Name} is closed");
+                throw new Exception($"❌ Cannot place order. Restaurant '{restaurant.Name}' is currently closed.");
+
+            // 🔥 ADDITION 3: MULTIPLE RESTAURANT BLOCK
+            if (restaurantId == null)
+            {
+                restaurantId = food.RestaurantId;
+            }
+            else if (restaurantId != food.RestaurantId)
+            {
+                throw new Exception("❌ Cannot order from multiple restaurants in a single order.");
+            }
 
             var itemTotal = food.Price * item.Quantity;
             totalAmount += itemTotal;
@@ -58,7 +71,7 @@ public class OrderService
         var newOrder = new Order
         {
             Id = $"ORD{DateTime.Now.Ticks}",
-            UserId = request.UserId,
+            UserId = email, // 🔥 FIX
             TotalAmount = totalAmount,
             Status = "Placed",
             OrderDate = DateTime.Now,
@@ -72,20 +85,17 @@ public class OrderService
         return newOrder;
     }
 
-    // ✅ USER ORDERS
     public List<Order> GetUserOrders(string userId)
     {
         var orders = FileHelper.ReadFromFile<Order>(ordersPath);
         return orders.Where(o => o.UserId == userId).ToList();
     }
 
-    // ✅ ADMIN → ALL ORDERS
     public List<Order> GetAllOrders()
     {
         return FileHelper.ReadFromFile<Order>(ordersPath);
     }
 
-    // ✅ UPDATE ORDER STATUS
     public Order UpdateOrderStatus(string orderId, string newStatus)
     {
         var orders = FileHelper.ReadFromFile<Order>(ordersPath);
@@ -95,7 +105,6 @@ public class OrderService
         if (order == null)
             throw new Exception("Order not found");
 
-        // ❌ BUSINESS RULE: NO UPDATE AFTER DELIVERY
         if (order.Status == "Delivered")
             throw new Exception("Order already delivered. Cannot update.");
 
@@ -109,16 +118,44 @@ public class OrderService
         return order;
     }
 
-    // ✅ STATUS FLOW
     private bool IsValidStatusTransition(string current, string next)
     {
         return current switch
         {
             "Placed" => next == "Preparing" || next == "Cancelled",
             "Preparing" => next == "Delivered" || next == "Cancelled",
-            "Delivered" => false,
-            "Cancelled" => false,
             _ => false
         };
+    }
+
+    // ✅ ADMIN FILTER
+    public List<Order> GetOrdersByAdmin(string adminEmail)
+    {
+        var orders = FileHelper.ReadFromFile<Order>(ordersPath);
+        var foodItems = FileHelper.ReadFromFile<FoodItem>(foodItemsPath);
+        var restaurants = FileHelper.ReadFromFile<Restaurant>(restaurantsPath);
+
+        var adminRestaurantIds = restaurants
+            .Where(r => r.AdminEmail == adminEmail)
+            .Select(r => r.Id.ToString())
+            .ToList();
+
+        var result = new List<Order>();
+
+        foreach (var order in orders)
+        {
+            foreach (var item in order.Items)
+            {
+                var food = foodItems.FirstOrDefault(f => f.Id == item.FoodItemId);
+
+                if (food != null && adminRestaurantIds.Contains(food.RestaurantId))
+                {
+                    result.Add(order);
+                    break;
+                }
+            }
+        }
+
+        return result;
     }
 }

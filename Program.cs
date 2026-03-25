@@ -1,7 +1,8 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi;
+using Microsoft.OpenApi.Models; // ✅ ONLY THIS
+using System.Security.Claims;
 using TastyKitchens.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,14 +21,22 @@ builder.Services.AddSwaggerGen(options =>
         Scheme = "Bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "Enter your JWT token. Example: eyJhbGci..."
+        Description = "Enter your JWT token"
     });
 
-    options.AddSecurityRequirement(document => new OpenApiSecurityRequirement
+    // ✅🔥 CORRECT VERSION
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
-            new OpenApiSecuritySchemeReference("Bearer", null),
-            new List<string>()
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] {}
         }
     });
 });
@@ -52,6 +61,7 @@ builder.Services.AddAuthentication(options =>
         ValidateIssuer = false,
         ValidateAudience = false,
         ValidateIssuerSigningKey = true,
+        RoleClaimType = ClaimTypes.Role,
         IssuerSigningKey = new SymmetricSecurityKey(
             Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"] ?? "THIS_IS_A_SUPER_SECRET_KEY_123456")
         )
