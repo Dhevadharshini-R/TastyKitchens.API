@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using TastyKitchens.API.Services;
 using TastyKitchens.API.DTOs;
 
-// 🔥 ADDED
+// ADDED
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 
@@ -19,14 +19,14 @@ public class RestaurantsController : ControllerBase
         _service = new RestaurantService();
     }
 
-    // ✅ GET ALL
+    // GET ALL
     [HttpGet]
     public IActionResult GetAll()
     {
         return Ok(_service.GetAll());
     }
 
-    // ✅ GET BY ID
+    // GET BY ID
     [HttpGet("{id}")]
     public IActionResult GetById(int id)
     {
@@ -38,30 +38,30 @@ public class RestaurantsController : ControllerBase
         return Ok(restaurant);
     }
 
-    // ✅ GET FOOD ITEMS OF RESTAURANT
+    // GET FOOD ITEMS OF RESTAURANT
     [HttpGet("{id}/fooditems")]
     public IActionResult GetFoodItems(int id)
     {
         return Ok(_service.GetFoodItemsByRestaurant(id));
     }
 
-    // ✅ CREATE
-    // 🔥 ADDED AUTHORIZATION
+    // CREATE
+    // ADDED AUTHORIZATION
     [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpPost]
     public IActionResult Create(CreateRestaurantDto dto)
     {
         var restaurant = _service.AddRestaurant(dto);
 
-        // 🔥 ADDED: SET ADMIN EMAIL FROM TOKEN
+        // ADDED: SET ADMIN EMAIL FROM TOKEN
         var email = User.FindFirst(ClaimTypes.Email)?.Value;
         restaurant.AdminEmail = email;
 
         return Ok(restaurant);
     }
 
-    // ✅ UPDATE
-    // 🔥 ADDED AUTHORIZATION
+    // UPDATE
+    // ADDED AUTHORIZATION
     [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpPut("{id}")]
     public IActionResult Update(int id, UpdateRestaurantDto dto)
@@ -74,8 +74,8 @@ public class RestaurantsController : ControllerBase
         return Ok(restaurant);
     }
 
-    // ✅ DELETE
-    // 🔥 ADDED AUTHORIZATION
+    // DELETE
+    // ADDED AUTHORIZATION
     [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)

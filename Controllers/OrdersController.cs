@@ -18,7 +18,7 @@ public class OrdersController : ControllerBase
         _orderService = new OrderService();
     }
 
-    // ✅ PLACE ORDER
+    // PLACE ORDER
     [Authorize(Roles = "User")]
     [HttpPost]
     public IActionResult PlaceOrder(CreateOrderRequest request)
@@ -27,7 +27,7 @@ public class OrdersController : ControllerBase
         {
             var email = User.FindFirst(ClaimTypes.Email)?.Value;
 
-            var order = _orderService.PlaceOrder(request, email); // 🔥 CHANGE
+            var order = _orderService.PlaceOrder(request, email); //  CHANGE
 
             return Ok(order);
         }
@@ -37,7 +37,7 @@ public class OrdersController : ControllerBase
         }
     }
 
-    // ✅ USER → ONLY THEIR ORDERS
+    // USER → ONLY THEIR ORDERS
     [HttpGet("my")]
     public IActionResult GetMyOrders()
     {
@@ -47,7 +47,7 @@ public class OrdersController : ControllerBase
         return Ok(orders);
     }
 
-    // ✅ ADMIN / SUPERADMIN
+    // ADMIN / SUPERADMIN
     [HttpGet("all")]
     [Authorize(Roles = "Admin,SuperAdmin")]
     public IActionResult GetAllOrders()
@@ -64,7 +64,7 @@ public class OrdersController : ControllerBase
         return Ok(orders);
     }
 
-    // ✅ UPDATE STATUS
+    // UPDATE STATUS
     [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpPut("{orderId}/status")]
     public IActionResult UpdateStatus(string orderId, [FromQuery] string status)

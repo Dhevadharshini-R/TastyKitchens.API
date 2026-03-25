@@ -7,20 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- 🔐 Auth -->
+    <!-- Auth -->
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.7" />
 
-    <!-- 🔐 JWT -->
+    <!-- JWT -->
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.16.0" />
 
-    <!-- 🔑 Password Hash -->
+    <!-- Password Hash -->
     <PackageReference Include="BCrypt.Net-Next" Version="4.1.0" />
 
-    <!-- 📘 Swagger (STABLE VERSION 🔥) -->
+    <!-- Swagger (STABLE VERSION ) -->
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
-  <!-- 📂 JSON files copy to output -->
+  <!-- JSON files copy to output -->
   <ItemGroup>
     <None Update="Data/orders.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -6,7 +6,7 @@ namespace TastyKitchens.API.Controllers;
 [Route("api/upload")]
 public class UploadController : ControllerBase
 {
-    // 🔹 Upload Restaurant Image
+    // Upload Restaurant Image
     [HttpPost("restaurant")]
     public async Task<IActionResult> UploadRestaurant(IFormFile file)
     {
@@ -30,7 +30,7 @@ public class UploadController : ControllerBase
         return Ok(new { imageUrl = url });
     }
 
-    // 🔹 Upload Food Image
+    // Upload Food Image
     [HttpPost("fooditem")]
     public async Task<IActionResult> UploadFood(IFormFile file)
     {

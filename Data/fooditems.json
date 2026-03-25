@@ -5,6 +5,7 @@
     "Name": "Big Mac",
     "Price": 250,
     "Rating": 4.5,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716207/Big_Mac_j82uaq.jpg"
   },
   {
@@ -13,6 +14,7 @@
     "Name": "Chicken Nuggets",
     "Price": 180,
     "Rating": 4.3,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716162/Chicken_Nuggets_tujt0a.jpg"
   },
   {
@@ -21,6 +23,7 @@
     "Name": "McChicken Sandwich",
     "Price": 210,
     "Rating": 4.4,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716294/McChicken_Sandwich_cq4n4y.jpg"
   },
   {
@@ -29,6 +32,7 @@
     "Name": "French Fries",
     "Price": 150,
     "Rating": 4.2,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716250/French_Fries_vp3eds.jpg"
   },
   {
@@ -37,6 +41,7 @@
     "Name": "Veg Cheese Roll",
     "Price": 140,
     "Rating": 4.1,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716715/Veg_Cheese_Roll1_qppf8n.jpg"
   },
   {
@@ -45,6 +50,7 @@
     "Name": "Paneer Pocket",
     "Price": 170,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716312/Paneer_Pocket_w6tbtf.jpg"
   },
   {
@@ -53,6 +59,7 @@
     "Name": "Crispy Corn Cup",
     "Price": 160,
     "Rating": 4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716227/Crispy_Corn_Cup_uctwv3.jpg"
   },
   {
@@ -61,6 +68,7 @@
     "Name": "Masala Potato Bites",
     "Price": 150,
     "Rating": 4.2,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716284/Masala_Potato_Bites_nrusjs.jpg"
   },
   {
@@ -69,6 +77,7 @@
     "Name": "Italian BMT Sub",
     "Price": 220,
     "Rating": 4.5,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716273/Italian_BMT_Sub_pxxrtu.jpg"
   },
   {
@@ -77,7 +86,98 @@
     "Name": "Veggie Delight Sub",
     "Price": 200,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716134/Veggie_Delight_Sub_dgbx19.jpg"
+  },
+  {
+    "id": "f11",
+    "restaurantId": "3",
+    "name": "Chicken Teriyaki Sub",
+    "price": 240,
+    "rating": 4.6,
+    "IsVeg": false,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716187/Chicken_Teriyaki_Sub_zvkqnc.jpg"
+  },
+  {
+    "id": "f12",
+    "restaurantId": "3",
+    "name": "Tuna Sandwich",
+    "price": 230,
+    "rating": 4.4,
+    "IsVeg": false,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716357/Tuna_Sandwich_pgzuea.jpg"
+  },
+  {
+    "id": "f13",
+    "restaurantId": "4",
+    "name": "Veg Loaded Sandwich",
+    "price": 180,
+    "rating": 4.1,
+    "IsVeg": true,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716363/Veg_Loaded_Sandwich_j2qntz.jpg"
+  },
+  {
+    "id": "f14",
+    "restaurantId": "4",
+    "name": "Paneer Burger",
+    "price": 210,
+    "rating": 4.3,
+    "IsVeg": true,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716308/Paneer_Burger_jl3ase.jpg"
+  },
+  {
+    "id": "f15",
+    "restaurantId": "4",
+    "name": "Corn Cheese Balls",
+    "price": 190,
+    "rating": 4.2,
+    "IsVeg": true,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716218/Corn_Cheese_Balls_sqlksf.jpg"
+  },
+  {
+    "id": "f16",
+    "restaurantId": "4",
+    "name": "Veg Crispy Wrap",
+    "price": 200,
+    "rating": 4.4,
+    "IsVeg": true,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773732481/Veg_Crispy_Wrap_cz6ets.jpg"
+  },
+  {
+    "id": "f17",
+    "restaurantId": "5",
+    "name": "Pepperoni Pizza",
+    "price": 320,
+    "rating": 4.6,
+    "IsVeg": false,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716329/Pepperoni_Pizza_ncr37k.jpg"
+  },
+  {
+    "id": "f18",
+    "restaurantId": "5",
+    "name": "Veg Supreme Pizza",
+    "price": 300,
+    "rating": 4.5,
+    "IsVeg": true,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716364/Veg_Supreme_Pizza_owcdt1.jpg"
+  },
+  {
+    "id": "f19",
+    "restaurantId": "5",
+    "name": "Cheese Garlic Bread",
+    "price": 190,
+    "rating": 4.3,
+    "IsVeg": true,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716237/Cheese_Garlic_Bread_yxvnvu.jpg"
+  },
+  {
+    "id": "f20",
+    "restaurantId": "5",
+    "name": "Chicken Tikka Pizza",
+    "price": 340,
+    "rating": 4.7,
+    "IsVeg": false,
+    "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716184/Chicken_Tikka_Pizza_vvi4a4.jpg"
   },
   {
     "Id": "f21",
@@ -85,6 +185,7 @@
     "Name": "Chocolate Sundae",
     "Price": 160,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716202/Chocolate_Sundae_bkk0ag.jpg"
   },
   {
@@ -93,6 +194,7 @@
     "Name": "Mango Ice Cream",
     "Price": 140,
     "Rating": 4.2,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716279/Mango_Ice_Cream_zzzhwh.jpg"
   },
   {
@@ -101,6 +203,7 @@
     "Name": "Strawberry Milkshake",
     "Price": 170,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716354/Strawberry_Milkshake_jcouhd.jpg"
   },
   {
@@ -109,6 +212,7 @@
     "Name": "Vanilla Soft Serve",
     "Price": 130,
     "Rating": 4.1,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716357/Vanilla_Soft_Serve_emkbiz.jpg"
   },
   {
@@ -117,6 +221,7 @@
     "Name": "Cheesy Nachos",
     "Price": 150,
     "Rating": 4.2,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716243/Cheesy_Nachos_bvfxnf.jpg"
   },
   {
@@ -125,6 +230,7 @@
     "Name": "Chicken Popcorn",
     "Price": 210,
     "Rating": 4.5,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716159/Chicken_Popcorn_tzybgz.jpg"
   },
   {
@@ -133,6 +239,7 @@
     "Name": "Jalapeno Bites",
     "Price": 170,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716273/Jalapeno_Bites_rfxtsv.jpg"
   },
   {
@@ -141,6 +248,7 @@
     "Name": "Stuffed Garlic Sticks",
     "Price": 180,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716351/Stuffed_Garlic_Sticks_openht.jpg"
   },
   {
@@ -149,6 +257,7 @@
     "Name": "Veg Fried Rice",
     "Price": 190,
     "Rating": 4.2,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716362/Veg_Fried_Rice_dkc9gz.jpg"
   },
   {
@@ -157,6 +266,7 @@
     "Name": "Veg Hakka Noodles",
     "Price": 200,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716363/Veg_Hakka_Noodles_wivvm2.jpg"
   },
   {
@@ -165,6 +275,7 @@
     "Name": "Paneer Manchurian",
     "Price": 230,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716316/Paneer_Manchurian_agd5m9.jpg"
   },
   {
@@ -173,6 +284,7 @@
     "Name": "Crispy Baby Corn",
     "Price": 210,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716221/Crispy_Baby_Corn_t2drqj.jpg"
   },
   {
@@ -181,6 +293,7 @@
     "Name": "Spaghetti Aglio e Olio",
     "Price": 260,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716345/Spaghetti_Aglio_e_Olio_tjj0qg.jpg"
   },
   {
@@ -189,6 +302,7 @@
     "Name": "Pasta Alfredo",
     "Price": 270,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716328/Pasta_Alfredo_ha5tri.jpg"
   },
   {
@@ -197,6 +311,7 @@
     "Name": "Lasagna",
     "Price": 290,
     "Rating": 4.7,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716279/Lasagna_jyhdve.jpg"
   },
   {
@@ -205,6 +320,7 @@
     "Name": "Penne Arrabiata",
     "Price": 250,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716320/Penne_Arrabiata_vtmgxr.jpg"
   },
   {
@@ -213,6 +329,7 @@
     "Name": "Original Recipe Chicken",
     "Price": 320,
     "Rating": 4.7,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716311/Original_Recipe_Chicken_cnsfju.jpg"
   },
   {
@@ -221,6 +338,7 @@
     "Name": "Zinger Burger",
     "Price": 240,
     "Rating": 4.5,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716121/Zinger_Burger_ptymtj.jpg"
   },
   {
@@ -229,6 +347,7 @@
     "Name": "Hot Wings",
     "Price": 210,
     "Rating": 4.4,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716271/Hot_Wings_ts5et1.jpg"
   },
   {
@@ -237,6 +356,7 @@
     "Name": "Chicken Bucket",
     "Price": 450,
     "Rating": 4.8,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716248/Chicken_Bucket_iiak8i.jpg"
   },
   {
@@ -245,6 +365,7 @@
     "Name": "Whopper",
     "Price": 260,
     "Rating": 4.6,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716168/Whopper_m1rhjb.jpg"
   },
   {
@@ -253,6 +374,7 @@
     "Name": "Chicken Royale",
     "Price": 250,
     "Rating": 4.5,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716158/Chicken_Royale_aooiic.jpg"
   },
   {
@@ -261,6 +383,7 @@
     "Name": "Onion Rings",
     "Price": 160,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716308/Onion_Rings_fsjwwj.jpg"
   },
   {
@@ -269,6 +392,7 @@
     "Name": "Veg Whopper",
     "Price": 240,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716366/Veg_Whopper_kbpc7p.jpg"
   },
   {
@@ -277,6 +401,7 @@
     "Name": "Margherita Pizza",
     "Price": 280,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716285/Margherita_Pizza_m378xh.jpg"
   },
   {
@@ -285,6 +410,7 @@
     "Name": "Farmhouse Pizza",
     "Price": 320,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716253/Farmhouse_Pizza_cbf4fg.jpg"
   },
   {
@@ -293,6 +419,7 @@
     "Name": "Chicken Dominator",
     "Price": 360,
     "Rating": 4.7,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716245/Chicken_Dominator_abor6o.jpg"
   },
   {
@@ -301,6 +428,7 @@
     "Name": "Garlic Breadsticks",
     "Price": 180,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716259/Garlic_Breadsticks_f87jzg.jpg"
   },
   {
@@ -309,6 +437,7 @@
     "Name": "Crunchy Taco",
     "Price": 170,
     "Rating": 4.2,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716231/Crunchy_Taco_xh2mmi.jpg"
   },
   {
@@ -317,6 +446,7 @@
     "Name": "Chicken Quesadilla",
     "Price": 240,
     "Rating": 4.5,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716156/Chicken_Quesadilla_qkiya8.jpg"
   },
   {
@@ -325,6 +455,7 @@
     "Name": "Burrito Supreme",
     "Price": 260,
     "Rating": 4.6,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716222/Burrito_Supreme_pfbzf1.jpg"
   },
   {
@@ -333,6 +464,7 @@
     "Name": "Nachos Bell Grande",
     "Price": 220,
     "Rating": 4.4,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716302/Nachos_Bell_Grande_vnshyu.jpg"
   },
   {
@@ -341,6 +473,7 @@
     "Name": "Cappuccino",
     "Price": 190,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716225/Cappuccino_ju14ys.jpg"
   },
   {
@@ -349,6 +482,7 @@
     "Name": "Latte",
     "Price": 200,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716278/Latte_sgjhn5.jpg"
   },
   {
@@ -357,6 +491,7 @@
     "Name": "Mocha",
     "Price": 210,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716293/Mocha_u5izxb.jpg"
   },
   {
@@ -365,6 +500,7 @@
     "Name": "Caramel Frappuccino",
     "Price": 230,
     "Rating": 4.7,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716233/Caramel_Frappuccino_mmxpk4.jpg"
   },
   {
@@ -373,6 +509,7 @@
     "Name": "Glazed Donut",
     "Price": 120,
     "Rating": 4.2,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716257/Glazed_Donut_bf6o8w.jpg"
   },
   {
@@ -381,6 +518,7 @@
     "Name": "Chocolate Donut",
     "Price": 130,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716200/Chocolate_Donut_rbuysc.jpg"
   },
   {
@@ -389,6 +527,7 @@
     "Name": "Blueberry Muffin",
     "Price": 160,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716208/Blueberry_Muffin_ipecce.jpg"
   },
   {
@@ -397,6 +536,7 @@
     "Name": "Croissant Sandwich",
     "Price": 200,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716230/Croissant_Sandwich_pdrlwn.jpg"
   },
   {
@@ -404,7 +544,8 @@
     "RestaurantId": "16",
     "Name": "Cajun Chicken",
     "Price": 260,
-    "Rating": 4.6,
+    "Rating": 4.6, 
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716226/Cajun_Chicken_dqp56o.jpg"
   },
   {
@@ -413,6 +554,7 @@
     "Name": "Chicken Tenders",
     "Price": 230,
     "Rating": 4.5,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716186/Chicken_Tenders_korokd.jpg"
   },
   {
@@ -421,6 +563,7 @@
     "Name": "Cajun Fries",
     "Price": 170,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716237/Cajun_Fries_dxe4an.jpg"
   },
   {
@@ -429,6 +572,7 @@
     "Name": "Chicken Biscuit",
     "Price": 210,
     "Rating": 4.4,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716241/Chicken_Biscuit_qcpzxm.jpg"
   },
   {
@@ -437,6 +581,7 @@
     "Name": "Burrito Bowl",
     "Price": 250,
     "Rating": 4.5,
+    "IsVeg":false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716216/Burrito_Bowl_orhh2l.jpg"
   },
   {
@@ -445,6 +590,7 @@
     "Name": "Chicken Tacos",
     "Price": 220,
     "Rating": 4.4,
+    "IsVeg":false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716193/Chicken_Tacos_qqyycv.jpg"
   },
   {
@@ -453,6 +599,7 @@
     "Name": "Guacamole Bowl",
     "Price": 240,
     "Rating": 4.6,
+    "IsVeg":true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716267/Guacamole_Bowl_qjymyy.jpg"
   },
   {
@@ -461,6 +608,7 @@
     "Name": "Steak Burrito",
     "Price": 280,
     "Rating": 4.7,
+    "IsVeg":false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716348/Steak_Burrito_suwyc3.jpg"
   },
   {
@@ -469,6 +617,7 @@
     "Name": "Peri Peri Chicken",
     "Price": 320,
     "Rating": 4.7,
+    "IsVeg":false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716325/Peri_Peri_Chicken_o75ahi.jpg"
   },
   {
@@ -477,6 +626,7 @@
     "Name": "Espetada Skewer",
     "Price": 290,
     "Rating": 4.5,
+    "IsVeg":false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716239/Espetada_Skewer_iq2utz.jpg"
   },
   {
@@ -485,6 +635,7 @@
     "Name": "Chicken Wrap",
     "Price": 230,
     "Rating": 4.4,
+    "IsVeg":false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716194/Chicken_Wrap_bsj4tl.jpg"
   },
   {
@@ -493,6 +644,7 @@
     "Name": "Garlic Bread",
     "Price": 160,
     "Rating": 4.3,
+    "IsVeg":true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716259/Garlic_Bread_hhduuo.jpg"
   },
   {
@@ -501,6 +653,7 @@
     "Name": "BBQ Ribs",
     "Price": 380,
     "Rating": 4.7,
+    "IsVeg":false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716183/BBQ_Ribs_xuqv6s.jpg"
   },
   {
@@ -509,6 +662,7 @@
     "Name": "Legendary Steak Burger",
     "Price": 340,
     "Rating": 4.6,
+    "IsVeg":false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716278/Legendary_Steak_Burger_t1gcer.jpg"
   },
   {
@@ -517,6 +671,7 @@
     "Name": "Buffalo Wings",
     "Price": 270,
     "Rating": 4.5,
+    "IsVeg":false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716357/uffalo_Wings_rgqvkt.jpg"
   },
   {
@@ -525,6 +680,7 @@
     "Name": "Pulled Pork Sandwich",
     "Price": 300,
     "Rating": 4.4,
+    "IsVeg":false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716332/Pulled_Pork_Sandwich_g9yr87.jpg"
   },
   {
@@ -533,6 +689,7 @@
     "Name": "Fettuccine Alfredo",
     "Price": 290,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716250/Fettuccine_Alfredo_gxntp9.jpg"
   },
   {
@@ -541,6 +698,7 @@
     "Name": "Chicken Parmigiana",
     "Price": 310,
     "Rating": 4.7,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716146/Chicken_Parmigiana_nex7gs.jpg"
   },
   {
@@ -548,6 +706,7 @@
     "RestaurantId": "20",
     "Name": "Minestrone Soup",
     "Price": 190,
+    "IsVeg": true,
     "Rating": 4.3,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716290/Minestrone_Soup_x0adsl.jpg"
   },
@@ -557,6 +716,7 @@
     "Name": "Shrimp Scampi",
     "Price": 330,
     "Rating": 4.6,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716339/Shrimp_Scampi_gh1d5p.jpg"
   },
   {
@@ -565,6 +725,7 @@
     "Name": "Classic Cheesecake",
     "Price": 220,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716213/Classic_Cheesecake_hxm4tl.jpg"
   },
   {
@@ -573,6 +734,7 @@
     "Name": "Oreo Cheesecake",
     "Price": 240,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716305/Oreo_Cheesecake_lmjsux.jpg"
   },
   {
@@ -581,6 +743,7 @@
     "Name": "Red Velvet Cheesecake",
     "Price": 250,
     "Rating": 4.7,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716334/Red_Velvet_Cheesecake_zlxfrq.jpg"
   },
   {
@@ -589,6 +752,7 @@
     "Name": "Chocolate Truffle Cake",
     "Price": 260,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716203/Chocolate_Truffle_Cake_sxpcci.jpg"
   },
   {
@@ -597,6 +761,7 @@
     "Name": "Orange Chicken",
     "Price": 260,
     "Rating": 4.5,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716304/Orange_Chicken_ed96y4.jpg"
   },
   {
@@ -605,6 +770,7 @@
     "Name": "Beijing Beef",
     "Price": 280,
     "Rating": 4.6,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716199/Beijing_Beef_f9rylw.jpg"
   },
   {
@@ -613,6 +779,7 @@
     "Name": "Kung Pao Chicken",
     "Price": 250,
     "Rating": 4.4,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716280/Kung_Pao_Chicken_l2nxne.jpg"
   },
   {
@@ -621,6 +788,7 @@
     "Name": "Chow Mein",
     "Price": 220,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716212/Chow_Mein_yqoo6z.jpg"
   },
   {
@@ -629,6 +797,7 @@
     "Name": "Dynamite Shrimp",
     "Price": 300,
     "Rating": 4.6,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716235/Dynamite_Shrimp_wvxm2s.jpg"
   },
   {
@@ -637,6 +806,7 @@
     "Name": "Mongolian Beef",
     "Price": 320,
     "Rating": 4.7,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716305/Mongolian_Beef_epcr8m.jpg"
   },
   {
@@ -645,6 +815,7 @@
     "Name": "Chicken Lettuce Wraps",
     "Price": 250,
     "Rating": 4.4,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716158/Chicken_Lettuce_Wraps_odxsde.jpg"
   },
   {
@@ -653,6 +824,7 @@
     "Name": "Fried Dumplings",
     "Price": 230,
     "Rating": 4.3,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716253/Fried_Dumplings_fdkcjh.jpg"
   },
   {
@@ -661,6 +833,8 @@
     "Name": "Fajitas",
     "Price": 280,
     "Rating": 4.5,
+    
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716245/Fajitas_iarb0c.jpg"
   },
   {
@@ -669,6 +843,7 @@
     "Name": "Queso Dip",
     "Price": 190,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716331/Queso_Dip_hofxpk.jpg"
   },
   {
@@ -677,6 +852,7 @@
     "Name": "Loaded Nachos",
     "Price": 220,
     "Rating": 4.4,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716288/Loaded_Nachos_bddc5i.jpg"
   },
   {
@@ -685,6 +861,7 @@
     "Name": "Southwestern Eggrolls",
     "Price": 240,
     "Rating": 4.5,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716340/Southwestern_Eggrolls_royw3k.jpg"
   },
   {
@@ -693,6 +870,7 @@
     "Name": "Pancakes",
     "Price": 180,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716319/Pancakes_goxh1g.jpg"
   },
   {
@@ -701,6 +879,7 @@
     "Name": "Belgian Waffles",
     "Price": 200,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716201/Belgian_Waffles_k3zznn.jpg"
   },
   {
@@ -709,6 +888,7 @@
     "Name": "French Toast",
     "Price": 190,
     "Rating": 4.3,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716257/French_Toast_kxsymd.jpg"
   },
   {
@@ -717,6 +897,7 @@
     "Name": "Omelette",
     "Price": 170,
     "Rating": 4.2,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716303/Omelette_anuryo.jpg"
   },
   {
@@ -725,6 +906,7 @@
     "Name": "Grand Slam Breakfast",
     "Price": 260,
     "Rating": 4.5,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716258/Grand_Slam_Breakfast_b48xuy.jpg"
   },
   {
@@ -733,6 +915,7 @@
     "Name": "Hash Browns",
     "Price": 140,
     "Rating": 4.2,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716269/Hash_Browns_ydg0sb.jpg"
   },
   {
@@ -741,6 +924,7 @@
     "Name": "Club Sandwich",
     "Price": 220,
     "Rating": 4.4,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716222/Club_Sandwich_xo2ajv.jpg"
   },
   {
@@ -749,6 +933,7 @@
     "Name": "Meatloaf",
     "Price": 240,
     "Rating": 4.3,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716295/Meatloaf_yrhuby.jpg"
   },
   {
@@ -757,6 +942,7 @@
     "Name": "Bacon Cheeseburger",
     "Price": 300,
     "Rating": 4.6,
+    "IsVeg":false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716093/Bacon_Cheeseburger_zbz1pv.jpg"
   },
   {
@@ -765,6 +951,7 @@
     "Name": "Veg Sandwich",
     "Price": 190,
     "Rating": 4.3,
+    "IsVeg":true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716362/Veg_Sandwich_yr85v5.jpg"
   },
   {
@@ -773,6 +960,7 @@
     "Name": "Grilled Cheese Sandwich",
     "Price": 210,
     "Rating": 4.4,
+    "IsVeg":true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716263/Grilled_Cheese_Sandwich_sgo8hc.jpg"
   },
   {
@@ -781,6 +969,7 @@
     "Name": "Cajun Fries",
     "Price": 180,
     "Rating": 4.3,
+    "IsVeg":true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716232/Cajun_Fries1_ipggfs.jpg"
   },
   {
@@ -789,6 +978,7 @@
     "Name": "Timbits",
     "Price": 150,
     "Rating": 4.2,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716352/Timbits_cs51jx.jpg"
   },
   {
@@ -797,6 +987,7 @@
     "Name": "Maple Donut",
     "Price": 160,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716285/Maple_Donut_s6kwym.jpg"
   },
   {
@@ -805,6 +996,7 @@
     "Name": "Bagel Sandwich",
     "Price": 200,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716177/Bagel_Sandwich_umsztz.jpg"
   },
   {
@@ -813,6 +1005,7 @@
     "Name": "Iced Capp",
     "Price": 180,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716269/Iced_Capp_ongtyn.jpg"
   },
   {
@@ -821,6 +1014,7 @@
     "Name": "Chocolate Chip Ice Cream",
     "Price": 190,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716198/Chocolate_Chip_Ice_Cream_e9bepa.jpg"
   },
   {
@@ -829,6 +1023,7 @@
     "Name": "Pralines n Cream",
     "Price": 210,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716330/Pralines_n_Cream_o3lusx.jpg"
   },
   {
@@ -837,6 +1032,7 @@
     "Name": "Mint Chocolate Chip",
     "Price": 200,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716294/Mint_Chocolate_Chip_ejgvme.jpg"
   },
   {
@@ -845,6 +1041,7 @@
     "Name": "Jamoca Almond Fudge",
     "Price": 220,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716273/Jamoca_Almond_Fudge_r5qymo.jpg"
   },
   {
@@ -853,6 +1050,7 @@
     "Name": "Blizzard",
     "Price": 230,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716212/Blizzard_navrja.jpg"
   },
   {
@@ -861,6 +1059,7 @@
     "Name": "Banana Split",
     "Price": 210,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716177/Banana_Split_usgzpd.jpg"
   },
   {
@@ -869,6 +1068,7 @@
     "Name": "Ice Cream Cake",
     "Price": 260,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716270/Ice_Cream_Cake_v1a22x.jpg"
   },
   {
@@ -877,6 +1077,7 @@
     "Name": "DQ Sundae",
     "Price": 190,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716231/DQ_Sundae_cxrwjz.jpg"
   },
   {
@@ -885,6 +1086,7 @@
     "Name": "Raj Kachori",
     "Price": 210,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716333/Raj_Kachori_apvkyi.jpg"
   },
   {
@@ -893,6 +1095,7 @@
     "Name": "Chole Bhature",
     "Price": 230,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716207/Chole_Bhature_gc9wjo.jpg"
   },
   {
@@ -901,6 +1104,7 @@
     "Name": "Pav Bhaji",
     "Price": 200,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716320/Pav_Bhaji_yltjau.jpg"
   },
   {
@@ -909,6 +1113,7 @@
     "Name": "Samosa Chaat",
     "Price": 180,
     "Rating": 4.2,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716347/Samosa_Chaat_ahfkdk.jpg"
   },
   {
@@ -917,6 +1122,7 @@
     "Name": "Original Glazed Donut",
     "Price": 150,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716308/Original_Glazed_Donut_njidgp.jpg"
   },
   {
@@ -925,6 +1131,7 @@
     "Name": "Chocolate Sprinkles Donut",
     "Price": 160,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716212/Chocolate_Sprinkles_Donut_ryztld.jpg"
   },
   {
@@ -933,6 +1140,7 @@
     "Name": "Strawberry Filled Donut",
     "Price": 170,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716350/Strawberry_Filled_Donut_zyx7tk.jpg"
   },
   {
@@ -941,6 +1149,7 @@
     "Name": "Lemon Filled Donut",
     "Price": 165,
     "Rating": 4.2,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716277/Lemon_Filled_Donut_bpfylt.jpg"
   },
   {
@@ -949,6 +1158,7 @@
     "Name": "Masala Dosa",
     "Price": 180,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716288/Masala_Dosa_vmkvkt.jpg"
   },
   {
@@ -957,6 +1167,7 @@
     "Name": "Idli Sambar",
     "Price": 120,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716269/Idli_Sambar_psl3v3.jpg"
   },
   {
@@ -965,6 +1176,7 @@
     "Name": "Pongal",
     "Price": 150,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716324/Pongal_ycblxi.jpg"
   },
   {
@@ -973,6 +1185,7 @@
     "Name": "Rava Kesari",
     "Price": 140,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716345/Rava_Kesari_cv6ag5.jpg"
   },
   {
@@ -981,6 +1194,7 @@
     "Name": "Mini Tiffin",
     "Price": 220,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716295/Mini_Tiffin_sqrd7u.jpg"
   },
   {
@@ -989,6 +1203,7 @@
     "Name": "Filter Coffee",
     "Price": 90,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716250/Filter_Coffee_vpuwg8.jpg"
   },
   {
@@ -997,6 +1212,7 @@
     "Name": "Mysore Pak",
     "Price": 160,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716299/Mysore_Pak_cqswqa.jpg"
   },
   {
@@ -1005,6 +1221,7 @@
     "Name": "Badam Halwa",
     "Price": 190,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716171/Badam_Halwa_hnbad4.jpg"
   },
   {
@@ -1013,6 +1230,7 @@
     "Name": "Hyderabadi Chicken Biryani",
     "Price": 320,
     "Rating": 4.7,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716267/Hyderabadi_Chicken_Biryani_dbf779.jpg"
   },
   {
@@ -1021,6 +1239,7 @@
     "Name": "Mutton Biryani",
     "Price": 360,
     "Rating": 4.8,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716301/Mutton_Biryan_oqdx6i.jpg"
   },
   {
@@ -1029,6 +1248,7 @@
     "Name": "Egg Biryani",
     "Price": 240,
     "Rating": 4.5,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716237/Egg_Biryani_zagoel.jpg"
   },
   {
@@ -1037,6 +1257,7 @@
     "Name": "Veg Dum Biryani",
     "Price": 220,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716359/Veg_Dum_Biryani_tjuawt.jpg"
   },
   {
@@ -1045,6 +1266,7 @@
     "Name": "Chicken Tikka Wrap",
     "Price": 210,
     "Rating": 4.5,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716183/Chicken_Tikka_Wrap_hjtnm4.jpg"
   },
   {
@@ -1053,6 +1275,7 @@
     "Name": "Paneer Wrap",
     "Price": 190,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716316/Paneer_Wrap_xcnatz.jpg"
   },
   {
@@ -1061,6 +1284,7 @@
     "Name": "Egg Bhurji Wrap",
     "Price": 180,
     "Rating": 4.3,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716237/Egg_Bhurji_Wrap_p8vprd.jpg"
   },
   {
@@ -1069,6 +1293,7 @@
     "Name": "Chicken Shawarma Wrap",
     "Price": 220,
     "Rating": 4.6,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716161/Chicken_Shawarma_Wrap_qmpnoi.jpg"
   },
   {
@@ -1077,6 +1302,7 @@
     "Name": "Grilled Prawns",
     "Price": 340,
     "Rating": 4.7,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716264/Grilled_Prawns_co4kci.jpg"
   },
   {
@@ -1085,6 +1311,7 @@
     "Name": "Tandoori Chicken",
     "Price": 310,
     "Rating": 4.6,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716357/Tandoori_Chicken_ru7phx.jpg"
   },
   {
@@ -1093,6 +1320,7 @@
     "Name": "BBQ Paneer",
     "Price": 240,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716189/BBQ_Paneer_xakpvt.jpg"
   },
   {
@@ -1101,6 +1329,7 @@
     "Name": "Grilled Pineapple",
     "Price": 170,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716263/Grilled_Pineapple_qy4ekb.jpg"
   },
   {
@@ -1109,6 +1338,7 @@
     "Name": "Steamed Chicken Momos",
     "Price": 180,
     "Rating": 4.5,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716350/Steamed_Chicken_Momos_nk7iqe.jpg"
   },
   {
@@ -1117,6 +1347,7 @@
     "Name": "Fried Veg Momos",
     "Price": 170,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716253/Fried_Veg_Momos_c6xuqy.jpg"
   },
   {
@@ -1125,6 +1356,7 @@
     "Name": "Tandoori Momos",
     "Price": 210,
     "Rating": 4.6,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716357/Tandoori_Momos_tyipuq.jpg"
   },
   {
@@ -1133,6 +1365,7 @@
     "Name": "Pan Fried Momos",
     "Price": 200,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716309/Pan_Fried_Momos_ga6mg8.jpg"
   },
   {
@@ -1141,6 +1374,7 @@
     "Name": "Veggie Fantasy Pizza",
     "Price": 290,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716165/Veggie_Fantasy_Pizza_d3h1se.jpg"
   },
   {
@@ -1149,6 +1383,7 @@
     "Name": "Chicken Keema Pizza",
     "Price": 320,
     "Rating": 4.6,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716248/Chicken_Keema_Pizza_l4bozs.jpg"
   },
   {
@@ -1157,6 +1392,7 @@
     "Name": "Cheesy Bread",
     "Price": 180,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716236/Cheesy_Bread_jz2jgg.jpg"
   },
   {
@@ -1165,6 +1401,7 @@
     "Name": "Paneer Pizza",
     "Price": 300,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716319/Paneer_Pizza_hmqrkf.jpg"
   },
   {
@@ -1173,6 +1410,7 @@
     "Name": "Grilled Chicken Steak",
     "Price": 330,
     "Rating": 4.6,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716264/Grilled_Chicken_Steak_g9fncu.jpg"
   },
   {
@@ -1181,6 +1419,7 @@
     "Name": "Creamy Mushroom Pasta",
     "Price": 260,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716218/Creamy_Mushroom_Pasta_qwanuw.jpg"
   },
   {
@@ -1189,6 +1428,7 @@
     "Name": "Roasted Vegetables",
     "Price": 210,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716338/Roasted_Vegetables_mudxua.jpg"
   },
   {
@@ -1197,6 +1437,7 @@
     "Name": "Garlic Butter Rice",
     "Price": 200,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716264/Garlic_Butter_Rice_pdkowe.jpg"
   },
   {
@@ -1205,6 +1446,7 @@
     "Name": "Belgian Chocolate Waffle",
     "Price": 220,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716190/Belgian_Chocolate_Waffle_zhzuh1.jpg"
   },
   {
@@ -1213,6 +1455,7 @@
     "Name": "Nutella Waffle",
     "Price": 240,
     "Rating": 4.7,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716300/Nutella_Waffle_kftusd.jpg"
   },
   {
@@ -1221,6 +1464,7 @@
     "Name": "Strawberry Cream Waffle",
     "Price": 230,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716349/Strawberry_Cream_Waffle_uyazae.jpg"
   },
   {
@@ -1229,6 +1473,7 @@
     "Name": "Maple Syrup Waffle",
     "Price": 210,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716285/Maple_Syrup_Waffle_hodork.jpg"
   },
   {
@@ -1237,6 +1482,7 @@
     "Name": "Ferrero Rocher Ice Cream",
     "Price": 260,
     "Rating": 4.7,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716247/Ferrero_Rocher_Ice_Cream_byf1k5.jpg"
   },
   {
@@ -1245,6 +1491,7 @@
     "Name": "Brownie Fudge Ice Cream",
     "Price": 250,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716212/Brownie_Fudge_Ice_Cream_fq3hri.jpg"
   },
   {
@@ -1253,6 +1500,7 @@
     "Name": "KitKat Ice Cream",
     "Price": 240,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716273/KitKat_Ice_Cream_aeaz0n.jpg"
   },
   {
@@ -1261,6 +1509,7 @@
     "Name": "Fruit Overload Ice Cream",
     "Price": 230,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716253/Fruit_Overload_Ice_Cream_lcwp8w.jpg"
   },
   {
@@ -1269,6 +1518,7 @@
     "Name": "Nachos Platter",
     "Price": 240,
     "Rating": 4.5,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716301/Nachos_Platter_ie16on.jpg"
   },
   {
@@ -1277,6 +1527,7 @@
     "Name": "Chicken Sliders",
     "Price": 260,
     "Rating": 4.6,
+    "IsVeg": false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716172/Chicken_Sliders_hbnu9l.jpg"
   },
   {
@@ -1285,6 +1536,7 @@
     "Name": "Paneer Tikka",
     "Price": 230,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716315/Paneer_Tikka_buphh8.jpg"
   },
   {
@@ -1293,6 +1545,7 @@
     "Name": "Crispy Calamari",
     "Price": 280,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716224/Crispy_Calamari_fmfl8f.jpg"
   },
   {
@@ -1301,6 +1554,7 @@
     "Name": "Falafel Wrap",
     "Price": 200,
     "Rating": 4.4,
+    "IsVeg":true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716241/Falafel_Wrap_nxmb2r.jpg"
   },
   {
@@ -1309,6 +1563,7 @@
     "Name": "Lamb Wrap",
     "Price": 260,
     "Rating": 4.6,
+    "IsVeg":false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716277/Lamb_Wrap_oyqxdo.jpg"
   },
   {
@@ -1317,6 +1572,7 @@
     "Name": "Veggie Hummus Wrap",
     "Price": 210,
     "Rating": 4.3,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716167/Veggie_Hummus_Wrap_qcztqa.jpg"
   },
   {
@@ -1325,6 +1581,7 @@
     "Name": "Grilled Chicken Wrap",
     "Price": 240,
     "Rating": 4.5,
+    "IsVeg":false,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716265/Grilled_Chicken_Wrap_amyhad.jpg"
   },
   {
@@ -1333,6 +1590,7 @@
     "Name": "Black Forest Cake",
     "Price": 320,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716206/Black_Forest_Cake_ivajvq.jpg"
   },
   {
@@ -1341,6 +1599,7 @@
     "Name": "Butterscotch Cake",
     "Price": 300,
     "Rating": 4.5,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716226/Butterscotch_Cake_uumbdv.jpg"
   },
   {
@@ -1349,6 +1608,7 @@
     "Name": "Pineapple Cake",
     "Price": 290,
     "Rating": 4.4,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716370/Pineapple_Cake_ldgqwh.png"
   },
   {
@@ -1357,6 +1617,7 @@
     "Name": "Chocolate Lava Cake",
     "Price": 260,
     "Rating": 4.6,
+    "IsVeg": true,
     "ImageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716200/Chocolate_Lava_Cake_lrirvf.jpg"
   }
 ]

@@ -19,7 +19,7 @@ public class OrderService
         restaurantsPath = Path.Combine(basePath, "Data", "restaurants.json");
     }
 
-    // ✅ PLACE ORDER (FIXED)
+    // PLACE ORDER (FIXED)
     public Order PlaceOrder(CreateOrderRequest request, string email)
     {
         var foodItems = FileHelper.ReadFromFile<FoodItem>(foodItemsPath);
@@ -28,7 +28,7 @@ public class OrderService
         var orderItems = new List<OrderItem>();
         decimal totalAmount = 0;
 
-        // 🔥 ADDITION 1: SINGLE RESTAURANT VALIDATION
+        // ADDITION 1: SINGLE RESTAURANT VALIDATION
         string? restaurantId = null;
 
         foreach (var item in request.Items)
@@ -43,18 +43,18 @@ public class OrderService
             if (restaurant == null)
                 throw new Exception("Restaurant not found");
 
-            // 🔥 ADDITION 2: CLOSED RESTAURANT CHECK (ALREADY YOUR LOGIC - ENHANCED MESSAGE)
+            // ADDITION 2: CLOSED RESTAURANT CHECK (ALREADY YOUR LOGIC - ENHANCED MESSAGE)
             if (!restaurant.IsOpen)
-                throw new Exception($"❌ Cannot place order. Restaurant '{restaurant.Name}' is currently closed.");
+                throw new Exception($"Cannot place order. Restaurant '{restaurant.Name}' is currently closed.");
 
-            // 🔥 ADDITION 3: MULTIPLE RESTAURANT BLOCK
+            // ADDITION 3: MULTIPLE RESTAURANT BLOCK
             if (restaurantId == null)
             {
                 restaurantId = food.RestaurantId;
             }
             else if (restaurantId != food.RestaurantId)
             {
-                throw new Exception("❌ Cannot order from multiple restaurants in a single order.");
+                throw new Exception(" Cannot order from multiple restaurants in a single order.");
             }
 
             var itemTotal = food.Price * item.Quantity;
@@ -71,7 +71,7 @@ public class OrderService
         var newOrder = new Order
         {
             Id = $"ORD{DateTime.Now.Ticks}",
-            UserId = email, // 🔥 FIX
+            UserId = email, // FIX
             TotalAmount = totalAmount,
             Status = "Placed",
             OrderDate = DateTime.Now,
@@ -128,7 +128,7 @@ public class OrderService
         };
     }
 
-    // ✅ ADMIN FILTER
+    // ADMIN FILTER
     public List<Order> GetOrdersByAdmin(string adminEmail)
     {
         var orders = FileHelper.ReadFromFile<Order>(ordersPath);

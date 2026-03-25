@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using TastyKitchens.API.Services;
 using TastyKitchens.API.DTOs;
 
-// 🔥 ADDED
+// ADDED
 using Microsoft.AspNetCore.Authorization;
 
 namespace TastyKitchens.API.Controllers;
@@ -18,14 +18,14 @@ public class FoodItemsController : ControllerBase
         _service = new FoodItemService();
     }
 
-    // ✅ GET ALL
+    // GET ALL
     [HttpGet]
     public IActionResult GetAll()
     {
         return Ok(_service.GetAll());
     }
 
-    // ✅ GET BY ID
+    // GET BY ID
     [HttpGet("{id}")]
     public IActionResult GetById(string id)
     {
@@ -37,8 +37,8 @@ public class FoodItemsController : ControllerBase
         return Ok(item);
     }
 
-    // ✅ CREATE
-    // 🔥 ADDED AUTHORIZATION
+    // CREATE
+    // ADDED AUTHORIZATION
     [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpPost]
     public IActionResult Create(CreateFoodItemDto dto)
@@ -47,8 +47,8 @@ public class FoodItemsController : ControllerBase
         return Ok(item);
     }
 
-    // ✅ UPDATE
-    // 🔥 ADDED AUTHORIZATION
+    // UPDATE
+    // ADDED AUTHORIZATION
     [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpPut("{id}")]
     public IActionResult Update(string id, UpdateFoodItemDto dto)
@@ -61,8 +61,8 @@ public class FoodItemsController : ControllerBase
         return Ok(item);
     }
 
-    // ✅ DELETE
-    // 🔥 ADDED AUTHORIZATION
+    // DELETE
+    // ADDED AUTHORIZATION
     [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpDelete("{id}")]
     public IActionResult Delete(string id)

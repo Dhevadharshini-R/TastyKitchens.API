@@ -1,7 +1,7 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models; // ✅ ONLY THIS
+using Microsoft.OpenApi.Models; 
 using System.Security.Claims;
 using TastyKitchens.API.Services;
 
@@ -24,7 +24,7 @@ builder.Services.AddSwaggerGen(options =>
         Description = "Enter your JWT token"
     });
 
-    // ✅🔥 CORRECT VERSION
+    // CORRECT VERSION
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {

@@ -16,7 +16,7 @@ public static partial class FakeDb
 
     static FakeDb()
     {
-        // 🔥 FIX: MUST USE List<T>
+        // FIX: MUST USE List<T>
         Restaurants = FileHelper.ReadFromFile<Restaurant>(restaurantsFile);
         FoodItems = FileHelper.ReadFromFile<FoodItem>(foodItemsFile);
         Users = FileHelper.ReadFromFile<User>(usersFile);

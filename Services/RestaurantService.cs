@@ -6,25 +6,25 @@ namespace TastyKitchens.API.Services;
 
 public class RestaurantService
 {
-    // ✅ GET ALL
+    // GET ALL
     public List<Restaurant> GetAll()
     {
         return FakeDb.Restaurants;
     }
 
-    // ✅ GET BY ID
+    // GET BY ID
     public Restaurant GetById(int id)
     {
         return FakeDb.Restaurants.FirstOrDefault(r => r.Id == id);
     }
 
-    // ✅ GET FOOD ITEMS
+    // GET FOOD ITEMS
     public List<FoodItem> GetFoodItemsByRestaurant(int restaurantId)
     {
         return FakeDb.FoodItems.Where(f => f.RestaurantId == restaurantId.ToString()).ToList();
     }
 
-    // ✅ CREATE
+    // CREATE
     public Restaurant AddRestaurant(CreateRestaurantDto dto)
     {
         var newId = FakeDb.Restaurants.Any() ? FakeDb.Restaurants.Max(r => r.Id) + 1 : 1;
@@ -43,17 +43,17 @@ public class RestaurantService
             Rating = 0,
             TotalReviews = 0,
 
-            // 🔥 ADDED (IMPORTANT)
+            // ADDED (IMPORTANT)
             AdminEmail = "admin@test.com"
         };
 
         FakeDb.Restaurants.Add(restaurant);
-        FakeDb.SaveRestaurants(); // 🔥 SAVE
+        FakeDb.SaveRestaurants(); // SAVE
 
         return restaurant;
     }
 
-    // ✅ UPDATE
+    // UPDATE
     public Restaurant UpdateRestaurant(int id, UpdateRestaurantDto dto)
     {
         var existing = FakeDb.Restaurants.FirstOrDefault(r => r.Id == id);
@@ -65,19 +65,19 @@ public class RestaurantService
         existing.Location = dto.Location;
         existing.CostForTwo = dto.CostForTwo;
 
-        FakeDb.SaveRestaurants(); // 🔥 SAVE
+        FakeDb.SaveRestaurants(); // SAVE
 
         return existing;
     }
 
-    // ✅ DELETE
+    // DELETE
     public bool DeleteRestaurant(int id)
     {
         var restaurant = FakeDb.Restaurants.FirstOrDefault(r => r.Id == id);
         if (restaurant == null) return false;
 
         FakeDb.Restaurants.Remove(restaurant);
-        FakeDb.SaveRestaurants(); // 🔥 SAVE
+        FakeDb.SaveRestaurants(); // SAVE
 
         return true;
     }
