@@ -1,5 +1,5 @@
+using System.Text.Json;
 using TastyKitchens.API.Models;
-using BCrypt.Net;
 
 namespace TastyKitchens.API.Data;
 
@@ -11,8 +11,8 @@ public static partial class FakeDb
 
     static FakeDb()
     {
-        InitializeRestaurants();
-        InitializeFoodItems();
+        LoadData();
+        
         Users.Add(new User 
         { 
             Id = 1, 
@@ -39,6 +39,35 @@ public static partial class FakeDb
         });
     }
 
-    static partial void InitializeRestaurants();
-    static partial void InitializeFoodItems();
+    private static void LoadData()
+    {
+        try
+        {
+            string dataPath = Path.Combine(AppContext.BaseDirectory, "Data");
+            // If running from source, look in the project directory instead
+            if (!Directory.Exists(dataPath))
+            {
+                dataPath = "Data";
+            }
+
+            string foodItemsPath = Path.Combine(dataPath, "foodItems.json");
+            string restaurantsPath = Path.Combine(dataPath, "restaurants.json");
+
+            if (File.Exists(foodItemsPath))
+            {
+                var json = File.ReadAllText(foodItemsPath);
+                FoodItems = JsonSerializer.Deserialize<List<FoodItem>>(json) ?? new List<FoodItem>();
+            }
+
+            if (File.Exists(restaurantsPath))
+            {
+                var json = File.ReadAllText(restaurantsPath);
+                Restaurants = JsonSerializer.Deserialize<List<Restaurant>>(json) ?? new List<Restaurant>();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading data: {ex.Message}");
+        }
+    }
 }
