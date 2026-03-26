@@ -24,6 +24,7 @@ namespace TastyKitchens.API.Services
             };
 
             FakeDb.Users.Add(user);
+            FakeDb.SaveUsersToFile();
             return user;
         }
 

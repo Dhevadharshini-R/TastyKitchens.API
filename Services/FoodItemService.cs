@@ -26,7 +26,9 @@ public class FoodItemService
             ImageUrl = dto.ImageUrl,
             Rating = dto.Rating
         };
+
         FakeDb.FoodItems.Add(foodItem);
+        FakeDb.SaveFoodItemsToFile(); 
         return foodItem;
     }
 
@@ -40,6 +42,7 @@ public class FoodItemService
         existing.ImageUrl = dto.ImageUrl;
         if (dto.Rating > 0) existing.Rating = dto.Rating;
 
+        FakeDb.SaveFoodItemsToFile();   // ✅ ADD THIS
         return existing;
     }
 
@@ -49,6 +52,7 @@ public class FoodItemService
         if (foodItem == null) return false;
 
         FakeDb.FoodItems.Remove(foodItem);
+        FakeDb.SaveFoodItemsToFile();
         return true;
     }
 }

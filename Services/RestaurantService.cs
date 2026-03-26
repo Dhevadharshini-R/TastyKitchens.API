@@ -31,6 +31,7 @@ public class RestaurantService
             TotalReviews = dto.TotalReviews
         };
         FakeDb.Restaurants.Add(restaurant);
+        FakeDb.SaveRestaurantsToFile();
         return restaurant;
     }
 
@@ -50,6 +51,7 @@ public class RestaurantService
         if (dto.Rating > 0) existing.Rating = dto.Rating;
         if (dto.TotalReviews > 0) existing.TotalReviews = dto.TotalReviews;
 
+        FakeDb.SaveRestaurantsToFile();
         return existing;
     }
 
@@ -59,6 +61,7 @@ public class RestaurantService
         if (restaurant == null) return false;
 
         FakeDb.Restaurants.Remove(restaurant);
+        FakeDb.SaveRestaurantsToFile();
         return true;
     }
 }

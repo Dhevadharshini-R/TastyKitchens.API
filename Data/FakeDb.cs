@@ -12,43 +12,21 @@ public static partial class FakeDb
     static FakeDb()
     {
         LoadData();
-        
-        Users.Add(new User 
-        { 
-            Id = 1, 
-            Username = "admin", 
-            Email = "admin@test.com", 
-            PasswordHash = BCrypt.Net.BCrypt.HashPassword("123456"), 
-            Role = "Admin" 
-        });
-        Users.Add(new User 
-        { 
-            Id = 2, 
-            Username = "superadmin", 
-            Email = "super@test.com", 
-            PasswordHash = BCrypt.Net.BCrypt.HashPassword("123456"), 
-            Role = "SuperAdmin" 
-        });
-        Users.Add(new User 
-        { 
-            Id = 3, 
-            Username = "user", 
-            Email = "user@test.com", 
-            PasswordHash = BCrypt.Net.BCrypt.HashPassword("123456"), 
-            Role = "User" 
-        });
     }
 
     private static void LoadData()
     {
         try
         {
-            string dataPath = Path.Combine(AppContext.BaseDirectory, "Data");
-            // If running from source, look in the project directory instead
-            if (!Directory.Exists(dataPath))
+            string dataPath = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+            string usersPath = Path.Combine(dataPath, "users.json");
+
+            if (File.Exists(usersPath))
             {
-                dataPath = "Data";
+                var json = File.ReadAllText(usersPath);
+                Users = JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
             }
+            
 
             string foodItemsPath = Path.Combine(dataPath, "foodItems.json");
             string restaurantsPath = Path.Combine(dataPath, "restaurants.json");
@@ -69,5 +47,92 @@ public static partial class FakeDb
         {
             Console.WriteLine($"Error loading data: {ex.Message}");
         }
+    }
+
+    private static void SaveFoodItems()
+    {
+        try
+        {
+            string dataPath = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+
+            if (!Directory.Exists(dataPath))
+                Directory.CreateDirectory(dataPath);
+
+            string foodItemsPath = Path.Combine(dataPath, "foodItems.json");
+
+            var json = JsonSerializer.Serialize(FoodItems, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+
+            File.WriteAllText(foodItemsPath, json);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving food items: {ex.Message}");
+        }
+    }
+
+    public static void SaveFoodItemsToFile()
+    {
+        SaveFoodItems();
+    }
+
+    private static void SaveRestaurants()
+    {
+    try
+    {
+        string dataPath = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+
+        if (!Directory.Exists(dataPath))
+            Directory.CreateDirectory(dataPath);
+
+        string restaurantsPath = Path.Combine(dataPath, "restaurants.json");
+
+        var json = JsonSerializer.Serialize(Restaurants, new JsonSerializerOptions
+        {
+            WriteIndented = true
+        });
+
+        File.WriteAllText(restaurantsPath, json);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error saving restaurants: {ex.Message}");
+    }
+    }
+
+    public static void SaveRestaurantsToFile()
+    {
+        SaveRestaurants();
+    }
+
+    private static void SaveUsers()
+    {
+        try
+        {
+            string dataPath = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+
+            if (!Directory.Exists(dataPath))
+                Directory.CreateDirectory(dataPath);
+
+            string usersPath = Path.Combine(dataPath, "users.json");
+
+            var json = JsonSerializer.Serialize(Users, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+
+            File.WriteAllText(usersPath, json);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving users: {ex.Message}");
+        }
+    }
+
+    public static void SaveUsersToFile()
+    {
+        SaveUsers();
     }
 }
