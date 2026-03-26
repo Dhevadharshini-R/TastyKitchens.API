@@ -37,19 +37,15 @@ public class RestaurantService
             Cuisine = dto.Cuisine,
             Location = dto.Location,
             CostForTwo = dto.CostForTwo,
-            DeliveryTime = "30 mins",
-            Distance = "2.5 km",
-            IsOpen = true,
-            Rating = 0,
-            TotalReviews = 0,
-
-            // ADDED (IMPORTANT)
-            AdminEmail = "admin@test.com"
+            DeliveryTime = dto.DeliveryTime ?? "30 mins",
+            Distance = dto.Distance ?? "2.5 km",
+            IsOpen = dto.IsOpen,
+            Rating = dto.Rating,
+            TotalReviews = dto.TotalReviews
         };
 
         FakeDb.Restaurants.Add(restaurant);
-        FakeDb.SaveRestaurants(); // SAVE
-
+        FakeDb.SaveRestaurantsToFile();
         return restaurant;
     }
 
@@ -64,9 +60,13 @@ public class RestaurantService
         existing.Cuisine = dto.Cuisine;
         existing.Location = dto.Location;
         existing.CostForTwo = dto.CostForTwo;
+        if (dto.DeliveryTime != null) existing.DeliveryTime = dto.DeliveryTime;
+        if (dto.Distance != null) existing.Distance = dto.Distance;
+        existing.IsOpen = dto.IsOpen;
+        if (dto.Rating > 0) existing.Rating = dto.Rating;
+        if (dto.TotalReviews > 0) existing.TotalReviews = dto.TotalReviews;
 
-        FakeDb.SaveRestaurants(); // SAVE
-
+        FakeDb.SaveRestaurantsToFile();
         return existing;
     }
 
@@ -77,8 +77,7 @@ public class RestaurantService
         if (restaurant == null) return false;
 
         FakeDb.Restaurants.Remove(restaurant);
-        FakeDb.SaveRestaurants(); // SAVE
-
+        FakeDb.SaveRestaurantsToFile();
         return true;
     }
 }

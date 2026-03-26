@@ -1,9 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using TastyKitchens.API.Services;
 using TastyKitchens.API.DTOs;
-
-// ADDED
-using Microsoft.AspNetCore.Authorization;
+using TastyKitchens.API.Models;
 
 namespace TastyKitchens.API.Controllers;
 
@@ -20,21 +18,21 @@ public class FoodItemsController : ControllerBase
 
     // GET ALL
     [HttpGet]
-    public IActionResult GetAll()
+    [AllowAnonymous]
+    public IActionResult GetFoodItems() 
     {
-        return Ok(_service.GetAll());
+        var foodItems = _service.GetAll();
+        return Ok(ApiResponse<IEnumerable<FoodItem>>.SuccessResponse(foodItems));
     }
 
-    // GET BY ID
     [HttpGet("{id}")]
     public IActionResult GetById(string id)
     {
-        var item = _service.GetById(id);
+        var foodItem = _service.GetById(id);
+        if (foodItem == null) 
+            return NotFound(ApiResponse<object>.FailureResponse("Food item not found"));
 
-        if (item == null)
-            return NotFound();
-
-        return Ok(item);
+        return Ok(ApiResponse<FoodItem>.SuccessResponse(foodItem));
     }
 
     // CREATE
@@ -43,35 +41,40 @@ public class FoodItemsController : ControllerBase
     [HttpPost]
     public IActionResult Create(CreateFoodItemDto dto)
     {
-        var item = _service.Create(dto);
-        return Ok(item);
+        if (!ModelState.IsValid)
+            return BadRequest(ApiResponse<object>.FailureResponse("Invalid input data"));
+
+        var foodItem = _service.AddFoodItem(dto);
+        if (foodItem == null)
+            return BadRequest(ApiResponse<object>.FailureResponse("Restaurant not found. Food items must belong to an existing restaurant."));
+
+        return CreatedAtAction(nameof(GetFoodItem), new { id = foodItem.Id }, ApiResponse<FoodItem>.SuccessResponse(foodItem, "Food item created successfully"));
     }
 
-    // UPDATE
-    // ADDED AUTHORIZATION
-    [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpPut("{id}")]
     public IActionResult Update(string id, UpdateFoodItemDto dto)
     {
-        var item = _service.Update(id, dto);
+        if (!ModelState.IsValid)
+            return BadRequest(ApiResponse<object>.FailureResponse("Invalid input data"));
 
-        if (item == null)
-            return NotFound();
+        var foodItem = _service.UpdateFoodItem(id, dto);
+        if (foodItem == null) 
+            return NotFound(ApiResponse<object>.FailureResponse("Food item not found"));
 
-        return Ok(item);
+        return Ok(ApiResponse<FoodItem>.SuccessResponse(foodItem, "Food item updated successfully"));
     }
 
     // DELETE
     // ADDED AUTHORIZATION
     [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpDelete("{id}")]
-    public IActionResult Delete(string id)
+    [Authorize(Roles = "Admin")]
+    public IActionResult DeleteFoodItem(int id)
     {
-        var success = _service.Delete(id);
+        var success = _service.DeleteFoodItem(id);
+        if (!success) 
+            return NotFound(ApiResponse<object>.FailureResponse("Food item not found"));
 
-        if (!success)
-            return NotFound();
-
-        return Ok("Deleted successfully");
+        return Ok(ApiResponse<object>.SuccessResponse(null, "Food item deleted successfully"));
     }
 }

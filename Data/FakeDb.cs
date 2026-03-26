@@ -1,6 +1,5 @@
+using System.Text.Json;
 using TastyKitchens.API.Models;
-using TastyKitchens.API.Helpers;
-using BCrypt.Net;
 
 namespace TastyKitchens.API.Data;
 
@@ -16,52 +15,128 @@ public static partial class FakeDb
 
     static FakeDb()
     {
-        // FIX: MUST USE List<T>
-        Restaurants = FileHelper.ReadFromFile<Restaurant>(restaurantsFile);
-        FoodItems = FileHelper.ReadFromFile<FoodItem>(foodItemsFile);
-        Users = FileHelper.ReadFromFile<User>(usersFile);
+        LoadData();
+    }
 
-        if (Users == null || Users.Count == 0)
+    private static void LoadData()
+    {
+        try
         {
-            Users = new List<User>
-            {
-                new User
-                {
-                    Id = 1,
-                    Username = "admin",
-                    Email = "admin@test.com",
-                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("123456"),
-                    Role = "Admin"
-                },
-                new User
-                {
-                    Id = 2,
-                    Username = "superadmin",
-                    Email = "super@test.com",
-                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("123456"),
-                    Role = "SuperAdmin"
-                }
-            };
+            string dataPath = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+            string usersPath = Path.Combine(dataPath, "users.json");
 
-            FileHelper.WriteToFile(usersFile, Users);
+            if (File.Exists(usersPath))
+            {
+                var json = File.ReadAllText(usersPath);
+                Users = JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
+            }
+            
+
+            string foodItemsPath = Path.Combine(dataPath, "foodItems.json");
+            string restaurantsPath = Path.Combine(dataPath, "restaurants.json");
+
+            if (File.Exists(foodItemsPath))
+            {
+                var json = File.ReadAllText(foodItemsPath);
+                FoodItems = JsonSerializer.Deserialize<List<FoodItem>>(json) ?? new List<FoodItem>();
+            }
+
+            if (File.Exists(restaurantsPath))
+            {
+                var json = File.ReadAllText(restaurantsPath);
+                Restaurants = JsonSerializer.Deserialize<List<Restaurant>>(json) ?? new List<Restaurant>();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading data: {ex.Message}");
         }
     }
 
-    public static void SaveUsers()
+    private static void SaveFoodItems()
     {
-        FileHelper.WriteToFile(usersFile, Users);
+        try
+        {
+            string dataPath = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+
+            if (!Directory.Exists(dataPath))
+                Directory.CreateDirectory(dataPath);
+
+            string foodItemsPath = Path.Combine(dataPath, "foodItems.json");
+
+            var json = JsonSerializer.Serialize(FoodItems, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+
+            File.WriteAllText(foodItemsPath, json);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving food items: {ex.Message}");
+        }
     }
 
-    public static void SaveRestaurants()
+    public static void SaveFoodItemsToFile()
     {
-        FileHelper.WriteToFile(restaurantsFile, Restaurants);
+        SaveFoodItems();
     }
 
-    public static void SaveFoodItems()
+    private static void SaveRestaurants()
     {
-        FileHelper.WriteToFile(foodItemsFile, FoodItems);
+    try
+    {
+        string dataPath = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+
+        if (!Directory.Exists(dataPath))
+            Directory.CreateDirectory(dataPath);
+
+        string restaurantsPath = Path.Combine(dataPath, "restaurants.json");
+
+        var json = JsonSerializer.Serialize(Restaurants, new JsonSerializerOptions
+        {
+            WriteIndented = true
+        });
+
+        File.WriteAllText(restaurantsPath, json);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error saving restaurants: {ex.Message}");
+    }
     }
 
-    static partial void InitializeRestaurants();
-    static partial void InitializeFoodItems();
+    public static void SaveRestaurantsToFile()
+    {
+        SaveRestaurants();
+    }
+
+    private static void SaveUsers()
+    {
+        try
+        {
+            string dataPath = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+
+            if (!Directory.Exists(dataPath))
+                Directory.CreateDirectory(dataPath);
+
+            string usersPath = Path.Combine(dataPath, "users.json");
+
+            var json = JsonSerializer.Serialize(Users, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+
+            File.WriteAllText(usersPath, json);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving users: {ex.Message}");
+        }
+    }
+
+    public static void SaveUsersToFile()
+    {
+        SaveUsers();
+    }
 }

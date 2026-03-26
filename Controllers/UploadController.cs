@@ -1,56 +1,74 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using TastyKitchens.API.Models;
 
 namespace TastyKitchens.API.Controllers;
 
 [ApiController]
 [Route("api/upload")]
+[Authorize(Roles = "Admin,SuperAdmin")]
 public class UploadController : ControllerBase
 {
-    // Upload Restaurant Image
-    [HttpPost("restaurant")]
-    public async Task<IActionResult> UploadRestaurant(IFormFile file)
+    private readonly IWebHostEnvironment _env;
+
+    public UploadController(IWebHostEnvironment env)
     {
-        if (file == null || file.Length == 0)
-            return BadRequest("No file uploaded");
-
-        var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/restaurants");
-
-        if (!Directory.Exists(folder))
-            Directory.CreateDirectory(folder);
-
-        var fileName = Guid.NewGuid() + Path.GetExtension(file.FileName);
-        var filePath = Path.Combine(folder, fileName);
-
-        using (var stream = new FileStream(filePath, FileMode.Create))
-        {
-            await file.CopyToAsync(stream);
-        }
-
-        var url = $"/images/restaurants/{fileName}";
-        return Ok(new { imageUrl = url });
+        _env = env;
     }
 
-    // Upload Food Image
-    [HttpPost("fooditem")]
-    public async Task<IActionResult> UploadFood(IFormFile file)
+    // ✅ Upload Restaurant Image
+    [HttpPost("restaurant")]
+    [Consumes("multipart/form-data")]
+    [ProducesResponseType(typeof(ApiResponse<object>), 200)]
+    [ProducesResponseType(typeof(ApiResponse<object>), 400)]
+    public async Task<IActionResult> UploadRestaurantImage(IFormFile file)
     {
         if (file == null || file.Length == 0)
-            return BadRequest("No file uploaded");
+            return BadRequest(ApiResponse<object>.FailureResponse("No file uploaded"));
 
-        var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/food");
+        var folderPath = Path.Combine(_env.WebRootPath, "images", "restaurants");
 
-        if (!Directory.Exists(folder))
-            Directory.CreateDirectory(folder);
+        if (!Directory.Exists(folderPath))
+            Directory.CreateDirectory(folderPath);
 
         var fileName = Guid.NewGuid() + Path.GetExtension(file.FileName);
-        var filePath = Path.Combine(folder, fileName);
+        var filePath = Path.Combine(folderPath, fileName);
 
         using (var stream = new FileStream(filePath, FileMode.Create))
         {
             await file.CopyToAsync(stream);
         }
 
-        var url = $"/images/food/{fileName}";
-        return Ok(new { imageUrl = url });
+        var imageUrl = $"{Request.Scheme}://{Request.Host}/images/restaurants/{fileName}";
+
+        return Ok(ApiResponse<object>.SuccessResponse(new { imageUrl }, "Restaurant image uploaded successfully"));
+    }
+
+    // ✅ Upload FoodItem Image
+    [HttpPost("fooditem")]
+    [Consumes("multipart/form-data")]
+    [ProducesResponseType(typeof(ApiResponse<object>), 200)]
+    [ProducesResponseType(typeof(ApiResponse<object>), 400)]
+    public async Task<IActionResult> UploadFoodItemImage(IFormFile file)
+    {
+        if (file == null || file.Length == 0)
+            return BadRequest(ApiResponse<object>.FailureResponse("No file uploaded"));
+
+        var folderPath = Path.Combine(_env.WebRootPath, "images", "fooditems");
+
+        if (!Directory.Exists(folderPath))
+            Directory.CreateDirectory(folderPath);
+
+        var fileName = Guid.NewGuid() + Path.GetExtension(file.FileName);
+        var filePath = Path.Combine(folderPath, fileName);
+
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
+
+        var imageUrl = $"{Request.Scheme}://{Request.Host}/images/fooditems/{fileName}";
+
+        return Ok(ApiResponse<object>.SuccessResponse(new { imageUrl }, "Food item image uploaded successfully"));
     }
 }

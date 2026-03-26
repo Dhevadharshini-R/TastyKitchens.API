@@ -1,3 +1,4 @@
+using TastyKitchens.API.Middleware;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -43,38 +44,49 @@ builder.Services.AddSwaggerGen(options =>
 
 // Services
 builder.Services.AddScoped<JwtService>();
-builder.Services.AddScoped<AuthService>();
 
-// Authorization
-builder.Services.AddAuthorization();
-
-// JWT Authentication
-builder.Services.AddAuthentication(options =>
+builder.Services.AddCors(options =>
 {
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
+    options.AddPolicy("ReactApp", policy =>
     {
-        ValidateIssuer = false,
-        ValidateAudience = false,
-        ValidateIssuerSigningKey = true,
-        RoleClaimType = ClaimTypes.Role,
-        IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"] ?? "THIS_IS_A_SUPER_SECRET_KEY_123456")
-        )
-    };
+        policy.WithOrigins(
+                "http://localhost:3000",   // React default
+                "http://localhost:5173",   // Vite default
+                "http://localhost:4200"    // Angular (just in case)
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
 });
 
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer("Bearer", options =>
+    {
+        var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"] ?? "this_is_a_very_secret_key_123_at_least_32_chars");
+
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+            ClockSkew = TimeSpan.Zero
+        };
+    });
+
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseStaticFiles();
 
 app.UseSwagger();
 app.UseSwaggerUI();
 
+app.UseCors("ReactApp");
 app.UseAuthentication();
 app.UseAuthorization();
 

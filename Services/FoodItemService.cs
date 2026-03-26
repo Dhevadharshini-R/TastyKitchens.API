@@ -28,14 +28,13 @@ public class FoodItemService
             Id = newId,
             RestaurantId = dto.RestaurantId,
             Name = dto.Name,
-            Price = dto.Price,
-            Rating = 0,
-            ImageUrl = dto.ImageUrl
+            Cost = dto.Cost,
+            ImageUrl = dto.ImageUrl,
+            Rating = dto.Rating
         };
 
         FakeDb.FoodItems.Add(foodItem);
-        FakeDb.SaveFoodItems(); // SAVE
-
+        FakeDb.SaveFoodItemsToFile(); 
         return foodItem;
     }
 
@@ -50,9 +49,9 @@ public class FoodItemService
         existing.Name = dto.Name;
         existing.Price = dto.Price;
         existing.ImageUrl = dto.ImageUrl;
+        if (dto.Rating > 0) existing.Rating = dto.Rating;
 
-        FakeDb.SaveFoodItems(); // SAVE
-
+        FakeDb.SaveFoodItemsToFile();   // ✅ ADD THIS
         return existing;
     }
 
@@ -64,9 +63,8 @@ public class FoodItemService
         if (food == null)
             return false;
 
-        FakeDb.FoodItems.Remove(food);
-        FakeDb.SaveFoodItems(); // SAVE
-
+        FakeDb.FoodItems.Remove(foodItem);
+        FakeDb.SaveFoodItemsToFile();
         return true;
     }
 }
