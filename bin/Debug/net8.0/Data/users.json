@@ -19,5 +19,12 @@
     "Email": "user@test.com",
     "PasswordHash": "$2a$11$xry3/cOz3FeDg1jUN9mS8esz3Zg1Byj40KFEyAeg6gRlZCM0YpPwe",
     "Role": "User"
+  },
+  {
+    "Id": 4,
+    "Username": "Balamurugan",
+    "Email": "bala@test.com",
+    "PasswordHash": "$2a$11$YFNKovRB.vAmzW788NNyY.oAx6NLLTguJ4p4FbxVGv63NlaUUaYBO",
+    "Role": "User"
   }
 ]
