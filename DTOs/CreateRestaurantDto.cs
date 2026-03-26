@@ -5,16 +5,16 @@ namespace TastyKitchens.API.DTOs;
 public class CreateRestaurantDto
 {
     [Required]
-    public string Name { get; set; }
+    public required string Name { get; set; }
 
     [Required]
-    public string ImageUrl { get; set; }
+    public required string ImageUrl { get; set; }
 
     [Required]
-    public string Cuisine { get; set; }
+    public required string Cuisine { get; set; }
 
     [Required]
-    public string Location { get; set; }
+    public required string Location { get; set; }
 
     [Range(1, 10000)]
     public int CostForTwo { get; set; }
