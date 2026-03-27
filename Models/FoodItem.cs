@@ -7,5 +7,6 @@ public class FoodItem
     public string Name { get; set; }
     public int Price { get; set; }
     public double Rating { get; set; }
+    public bool IsVeg { get; set; }
     public string ImageUrl { get; set; }
 }

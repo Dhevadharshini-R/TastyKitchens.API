@@ -1,30 +1,30 @@
-[
+﻿[
   {
-    "Id": 1,
-    "Username": "admin",
-    "Email": "admin@test.com",
-    "PasswordHash": "$2a$11$bW7fUpGDNq5BPaFAztl05uEhlGvTKzucHAMhNG/cWCr.tomHeBbFK",
-    "Role": "Admin"
+    "id": 1,
+    "username": "admin",
+    "email": "admin@test.com",
+    "passwordHash": "$2a$11$bW7fUpGDNq5BPaFAztl05uEhlGvTKzucHAMhNG/cWCr.tomHeBbFK",
+    "role": "Admin"
   },
   {
-    "Id": 2,
-    "Username": "superadmin",
-    "Email": "super@test.com",
-    "PasswordHash": "$2a$11$.L.ZxXBXVCwJOOXi6x9tRe3Wp3HADti4vmVxs0FvYNZahwDTV1Agm",
-    "Role": "SuperAdmin"
+    "id": 2,
+    "username": "superadmin",
+    "email": "super@test.com",
+    "passwordHash": "$2a$11$.L.ZxXBXVCwJOOXi6x9tRe3Wp3HADti4vmVxs0FvYNZahwDTV1Agm",
+    "role": "SuperAdmin"
   },
   {
-    "Id": 3,
-    "Username": "user",
-    "Email": "user@test.com",
-    "PasswordHash": "$2a$11$xry3/cOz3FeDg1jUN9mS8esz3Zg1Byj40KFEyAeg6gRlZCM0YpPwe",
-    "Role": "User"
+    "id": 3,
+    "username": "user",
+    "email": "user@test.com",
+    "passwordHash": "$2a$11$xry3/cOz3FeDg1jUN9mS8esz3Zg1Byj40KFEyAeg6gRlZCM0YpPwe",
+    "role": "User"
   },
   {
-    "Id": 4,
-    "Username": "Balamurugan",
-    "Email": "bala@test.com",
-    "PasswordHash": "$2a$11$YFNKovRB.vAmzW788NNyY.oAx6NLLTguJ4p4FbxVGv63NlaUUaYBO",
-    "Role": "User"
+    "id": 4,
+    "username": "Balamurugan",
+    "email": "bala@test.com",
+    "passwordHash": "$2a$11$YFNKovRB.vAmzW788NNyY.oAx6NLLTguJ4p4FbxVGv63NlaUUaYBO",
+    "role": "User"
   }
 ]
