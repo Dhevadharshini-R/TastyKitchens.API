@@ -22,7 +22,7 @@ public class FoodItemService
             Id = nextId,
             RestaurantId = dto.RestaurantId,
             Name = dto.Name,
-            Cost = dto.Cost,
+            Price = dto.Price,
             ImageUrl = dto.ImageUrl,
             Rating = dto.Rating
         };
@@ -38,7 +38,7 @@ public class FoodItemService
         if (existing == null) return null;
 
         existing.Name = dto.Name;
-        existing.Cost = dto.Cost;
+        existing.Price = dto.Price;
         existing.ImageUrl = dto.ImageUrl;
         if (dto.Rating > 0) existing.Rating = dto.Rating;
 
