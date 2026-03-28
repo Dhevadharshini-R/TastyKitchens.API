@@ -36,15 +36,20 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddScoped<JwtService>();
+builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<FoodItemService>();
+builder.Services.AddScoped<RestaurantService>();
+builder.Services.AddScoped<OrderService>();
+builder.Services.AddScoped<UserService>();
 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("ReactApp", policy =>
     {
         policy.WithOrigins(
-                "http://localhost:3000",   // React default
-                "http://localhost:5173",   // Vite default
-                "http://localhost:4200"    // Angular (just in case)
+                "http://localhost:3000",
+                "http://localhost:5173",
+                "http://localhost:4200"
             )
             .AllowAnyHeader()
             .AllowAnyMethod();

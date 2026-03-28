@@ -12,7 +12,6 @@ public class FoodItemService
 
     public FoodItem AddFoodItem(CreateFoodItemDto dto)
     {
-        // ✅ Validate Restaurant exists before adding food
         if (!FakeDb.Restaurants.Any(r => r.Id == dto.RestaurantId))
             return null;
 
@@ -42,7 +41,7 @@ public class FoodItemService
         existing.ImageUrl = dto.ImageUrl;
         if (dto.Rating > 0) existing.Rating = dto.Rating;
 
-        FakeDb.SaveFoodItemsToFile();   // ✅ ADD THIS
+        FakeDb.SaveFoodItemsToFile();
         return existing;
     }
 

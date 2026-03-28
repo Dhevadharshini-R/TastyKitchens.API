@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Py4h5RbV3Zg=",
+  "dgSpecHash": "6cWoj7c9mHk=",
   "success": true,
-  "projectFilePath": "C:\\Backend_Tasty_Kitchens.API\\TastyKitchens.API\\TastyKitchens.API.csproj",
+  "projectFilePath": "C:\\BackendTastyKitchens.API\\TastyKitchens.API\\TastyKitchens.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",

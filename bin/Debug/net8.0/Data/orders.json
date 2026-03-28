@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ORD639102193765886391",
+    "userId": "user@test.com",
+    "phoneNumber": "9876543210",
+    "address": "Chennai, Tamil Nadu",
+    "restaurantId": 1,
+    "totalAmount": 990,
+    "status": "Placed",
+    "orderDate": "2026-03-27T14:42:56.5886435+05:30",
+    "items": [
+      {
+        "foodItemId": 7,
+        "quantity": 1,
+        "unitPrice": 160
+      },
+      {
+        "foodItemId": 18,
+        "quantity": 1,
+        "unitPrice": 300
+      },
+      {
+        "foodItemId": 20,
+        "quantity": 1,
+        "unitPrice": 340
+      },
+      {
+        "foodItemId": 142,
+        "quantity": 1,
+        "unitPrice": 190
+      }
+    ]
+  },
+  {
+    "id": "ORD639102271701018644",
+    "userId": "user@test.com",
+    "phoneNumber": "string",
+    "address": "string",
+    "restaurantId": 1,
+    "totalAmount": 500,
+    "status": "Placed",
+    "orderDate": "2026-03-27T16:52:50.1019766+05:30",
+    "items": [
+      {
+        "foodItemId": 1,
+        "quantity": 2,
+        "unitPrice": 250
+      }
+    ]
+  },
+  {
+    "id": "ORD639102273806230566",
+    "userId": "user@test.com",
+    "phoneNumber": "string",
+    "address": "string",
+    "restaurantId": 1,
+    "totalAmount": 0,
+    "status": "Placed",
+    "orderDate": "2026-03-27T16:56:20.6230621+05:30",
+    "items": [
+      {
+        "foodItemId": 2,
+        "quantity": 3,
+        "unitPrice": 0
+      }
+    ]
+  }
+]

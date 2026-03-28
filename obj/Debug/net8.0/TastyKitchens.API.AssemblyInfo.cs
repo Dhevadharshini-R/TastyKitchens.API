@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TastyKitchens.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0f117666868a50f468440f8307c88eae9cffc7a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+711b06692d9f2c82e67acaaafc74759b4a56238d")]
 [assembly: System.Reflection.AssemblyProductAttribute("TastyKitchens.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TastyKitchens.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

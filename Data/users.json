@@ -1,30 +1,65 @@
-﻿[
+[
   {
     "id": 1,
     "username": "admin",
     "email": "admin@test.com",
     "passwordHash": "$2a$11$bW7fUpGDNq5BPaFAztl05uEhlGvTKzucHAMhNG/cWCr.tomHeBbFK",
-    "role": "Admin"
+    "role": "Admin",
+    "phoneNumber": "",
+    "address": ""
   },
   {
     "id": 2,
     "username": "superadmin",
     "email": "super@test.com",
     "passwordHash": "$2a$11$.L.ZxXBXVCwJOOXi6x9tRe3Wp3HADti4vmVxs0FvYNZahwDTV1Agm",
-    "role": "SuperAdmin"
+    "role": "SuperAdmin",
+    "phoneNumber": "",
+    "address": ""
   },
   {
     "id": 3,
     "username": "user",
     "email": "user@test.com",
     "passwordHash": "$2a$11$xry3/cOz3FeDg1jUN9mS8esz3Zg1Byj40KFEyAeg6gRlZCM0YpPwe",
-    "role": "User"
+    "role": "User",
+    "phoneNumber": "",
+    "address": ""
   },
   {
     "id": 4,
     "username": "Balamurugan",
     "email": "bala@test.com",
     "passwordHash": "$2a$11$YFNKovRB.vAmzW788NNyY.oAx6NLLTguJ4p4FbxVGv63NlaUUaYBO",
-    "role": "User"
+    "role": "User",
+    "phoneNumber": "",
+    "address": ""
+  },
+  {
+    "id": 5,
+    "username": "admin1",
+    "email": "admin1@test.com",
+    "passwordHash": "$2a$11$Fx71V3E/kpxenXIUKratWu/ppfmkNAULxJD2nkKebCJP7R5gVDcDi",
+    "role": "User",
+    "phoneNumber": "",
+    "address": ""
+  },
+  {
+    "id": 6,
+    "username": "Dheva",
+    "email": "Dheva@gmail.com",
+    "passwordHash": "$2a$11$9uuiZ2hgulZlf0d7B8h0NeOzzAp4KDdWhdUaAg6VzsmjXfFws6q46",
+    "role": "User",
+    "phoneNumber": "",
+    "address": ""
+  },
+  {
+    "id": 7,
+    "username": "sarala",
+    "email": "sarala@gmail.com",
+    "passwordHash": "$2a$11$F4.HvLWdlaHx.Y6mnjuj.ehV714xyNRSTnlh4ZX9Vq2Oss8DAysrS",
+    "role": "User",
+    "phoneNumber": "9876544213",
+    "address": "Chennai"
   }
 ]

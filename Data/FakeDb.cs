@@ -8,6 +8,7 @@ public static partial class FakeDb
     public static List<Restaurant> Restaurants = new List<Restaurant>();
     public static List<FoodItem> FoodItems = new List<FoodItem>();
     public static List<User> Users = new List<User>();
+    public static List<Order> Orders = new List<Order>();
 
     static FakeDb()
     {
@@ -31,6 +32,13 @@ public static partial class FakeDb
             {
                 var json = File.ReadAllText(usersPath);
                 Users = JsonSerializer.Deserialize<List<User>>(json, _jsonOptions) ?? new List<User>();
+            }
+
+            string ordersPath = Path.Combine(dataPath, "orders.json");
+            if (File.Exists(ordersPath))
+            {
+                var json = File.ReadAllText(ordersPath);
+                Orders = JsonSerializer.Deserialize<List<Order>>(json, _jsonOptions) ?? new List<Order>();
             }
             
 
@@ -131,5 +139,28 @@ public static partial class FakeDb
     public static void SaveUsersToFile()
     {
         SaveUsers();
+    }
+
+    private static void SaveOrders()
+    {
+        try
+        {
+            string dataPath = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+            if (!Directory.Exists(dataPath))
+                Directory.CreateDirectory(dataPath);
+
+            string ordersPath = Path.Combine(dataPath, "orders.json");
+            var json = JsonSerializer.Serialize(Orders, _jsonOptions);
+            File.WriteAllText(ordersPath, json);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving orders: {ex.Message}");
+        }
+    }
+
+    public static void SaveOrdersToFile()
+    {
+        SaveOrders();
     }
 }
