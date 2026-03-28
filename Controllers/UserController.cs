@@ -1,40 +1,75 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
-using System.Security.Claims;
-using TastyKitchens.API.Services;
-using TastyKitchens.API.DTOs;
+using Microsoft.AspNetCore.Mvc; 
 
-namespace TastyKitchens.API.Controllers;
+using Microsoft.AspNetCore.Authorization; 
 
-[ApiController]
-[Route("api/user")]
-[Authorize]
-public class UserController : ControllerBase
-{
-    private readonly UserService _userService = new UserService();
+using System.Security.Claims; 
 
-    // ✅ GET PROFILE
-    [HttpGet("profile")]
-    public IActionResult GetProfile()
-    {
-        var email = User.FindFirst(ClaimTypes.Email)?.Value;
+using TastyKitchens.API.Services; 
 
-        var user = _userService.GetUserByEmail(email);
+using TastyKitchens.API.DTOs; 
 
-        return Ok(user);
-    }
+ 
 
-    // ✅ UPDATE PROFILE
-    [HttpPut("profile")]
-    public IActionResult UpdateProfile([FromBody] UpdateUserProfileDto dto)
-    {
-        var email = User.FindFirst(ClaimTypes.Email)?.Value;
+namespace TastyKitchens.API.Controllers; 
 
-        var user = _userService.UpdateProfile(email, dto.PhoneNumber, dto.Address);
+ 
 
-        if (user == null)
-            return NotFound("User not found");
+[ApiController] 
 
-        return Ok(user);
-    }
-}
+[Route("api/user")] 
+
+[Authorize] 
+
+public class UserController : ControllerBase 
+
+{ 
+
+    private readonly UserService _userService = new UserService(); 
+
+ 
+
+    [HttpGet("profile")] 
+
+    public IActionResult GetProfile() 
+
+    { 
+
+        var email = User.FindFirst(ClaimTypes.Email)?.Value; 
+
+ 
+
+        var user = _userService.GetUserByEmail(email); 
+
+ 
+
+        return Ok(user); 
+
+    } 
+
+ 
+
+    [HttpPut("profile")] 
+
+    public IActionResult UpdateProfile([FromBody] UpdateUserProfileDto dto) 
+
+    { 
+
+        var email = User.FindFirst(ClaimTypes.Email)?.Value; 
+
+ 
+
+        var user = _userService.UpdateProfile(email, dto.PhoneNumber, dto.Address); 
+
+ 
+
+        if (user == null) 
+
+            return NotFound("User not found"); 
+
+ 
+
+        return Ok(user); 
+
+    } 
+
+} 

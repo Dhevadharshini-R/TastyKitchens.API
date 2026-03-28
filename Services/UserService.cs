@@ -1,37 +1,25 @@
+using TastyKitchens.API.Data;
 using TastyKitchens.API.Models;
-using TastyKitchens.API.Helpers;
+using TastyKitchens.API.DTOs;
 
 namespace TastyKitchens.API.Services;
 
 public class UserService
 {
-    private readonly string usersPath;
-
-    public UserService()
-    {
-        usersPath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "users.json");
-    }
-
     public User GetUserByEmail(string email)
     {
-        var users = FileHelper.ReadFromFile<User>(usersPath);
-        return users.FirstOrDefault(u => u.Email == email);
+        return FakeDb.Users.FirstOrDefault(u => u.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
     }
 
-    public User UpdateProfile(string email, string phone, string address)
+    public User UpdateProfile(string email, string phoneNumber, string address)
     {
-        var users = FileHelper.ReadFromFile<User>(usersPath);
+        var user = GetUserByEmail(email);
+        if (user == null) return null;
 
-        var user = users.FirstOrDefault(u => u.Email == email);
-
-        if (user == null)
-            return null;
-
-        user.PhoneNumber = phone;
+        user.PhoneNumber = phoneNumber;
         user.Address = address;
 
-        FileHelper.WriteToFile(usersPath, users);
-
+        FakeDb.SaveUsersToFile();
         return user;
     }
 }

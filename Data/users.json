@@ -1,65 +1,52 @@
 [
   {
-    "Id": 1,
-    "Username": "admin",
-    "Email": "admin@test.com",
-    "PasswordHash": "$2a$11$bW7fUpGDNq5BPaFAztl05uEhlGvTKzucHAMhNG/cWCr.tomHeBbFK",
-    "Role": "Admin",
-    "PhoneNumber": "",
-    "Address": ""
+    "id": 1,
+    "username": "admin",
+    "email": "admin@test.com",
+    "passwordHash": "$2a$11$.iT5fvdIzC0KjLljNl2vIuut1BqQ3eN9OSchHa2GhhYLCOi5v0wMe",
+    "role": "Admin",
+    "phoneNumber": "",
+    "address": "",
+    "restaurantId": 1
   },
   {
-    "Id": 2,
-    "Username": "superadmin",
-    "Email": "super@test.com",
-    "PasswordHash": "$2a$11$.L.ZxXBXVCwJOOXi6x9tRe3Wp3HADti4vmVxs0FvYNZahwDTV1Agm",
-    "Role": "SuperAdmin",
-    "PhoneNumber": "",
-    "Address": ""
+    "id": 2,
+    "username": "superadmin",
+    "email": "super@test.com",
+    "passwordHash": "$2a$11$PDZy34v5Ppa6fehhhVtOGOCH8sGXFLt57jx8MeTkCVf3EHAjZ317y",
+    "role": "SuperAdmin",
+    "phoneNumber": "",
+    "address": "",
+    "restaurantId": 0
   },
   {
-    "Id": 3,
-    "Username": "user",
-    "Email": "user@test.com",
-    "PasswordHash": "$2a$11$xry3/cOz3FeDg1jUN9mS8esz3Zg1Byj40KFEyAeg6gRlZCM0YpPwe",
-    "Role": "User",
-    "PhoneNumber": "",
-    "Address": ""
+    "id": 3,
+    "username": "user",
+    "email": "user@test.com",
+    "passwordHash": "$2a$11$DpV.iM3uHA8bLeSLsCAql.asq8Y5BDudkHThKgzqzFwLtLYsPzlj2",
+    "role": "User",
+    "phoneNumber": "",
+    "address": "",
+    "restaurantId": 0
   },
   {
-    "Id": 4,
-    "Username": "Balamurugan",
-    "Email": "bala@test.com",
-    "PasswordHash": "$2a$11$YFNKovRB.vAmzW788NNyY.oAx6NLLTguJ4p4FbxVGv63NlaUUaYBO",
-    "Role": "User",
-    "PhoneNumber": "",
-    "Address": ""
+    "id": 4,
+    "username": "Dhevadharshini",
+    "email": "dheva@gmail.com",
+    "passwordHash": "$2a$11$j9kcoBDuodCA5t5E0aNIh.ClefvbrOT97M9.uadFowjgIGSaRK77y",
+    "role": "User",
+    "phoneNumber": "",
+    "address": "",
+    "restaurantId": 0
   },
   {
-    "Id": 5,
-    "Username": "admin1",
-    "Email": "admin1@test.com",
-    "PasswordHash": "$2a$11$Fx71V3E/kpxenXIUKratWu/ppfmkNAULxJD2nkKebCJP7R5gVDcDi",
-    "Role": "User",
-    "PhoneNumber": "",
-    "Address": ""
-  },
-  {
-    "Id": 6,
-    "Username": "Dheva",
-    "Email": "Dheva@gmail.com",
-    "PasswordHash": "$2a$11$9uuiZ2hgulZlf0d7B8h0NeOzzAp4KDdWhdUaAg6VzsmjXfFws6q46",
-    "Role": "User",
-    "PhoneNumber": "",
-    "Address": ""
-  },
-  {
-    "Id": 7,
-    "Username": "sarala",
-    "Email": "sarala@gmail.com",
-    "PasswordHash": "$2a$11$F4.HvLWdlaHx.Y6mnjuj.ehV714xyNRSTnlh4ZX9Vq2Oss8DAysrS",
-    "Role": "User",
-    "PhoneNumber": "9876544213",
-    "Address": "Chennai"
+    "id": 5,
+    "username": "admin1",
+    "email": "admin1@test.com",
+    "passwordHash": "$2a$11$DRluQghDpgtlpCRuFUbFN.YWJsNBvNl31tp8pEe5P..0cjpp.P5d.",
+    "role": "Admin",
+    "phoneNumber": "",
+    "address": "",
+    "restaurantId":2
   }
 ]

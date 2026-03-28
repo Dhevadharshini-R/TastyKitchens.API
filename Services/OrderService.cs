@@ -1,147 +1,95 @@
+using TastyKitchens.API.Data;
 using TastyKitchens.API.Models;
 using TastyKitchens.API.DTOs;
-using TastyKitchens.API.Helpers;
 
 namespace TastyKitchens.API.Services;
 
 public class OrderService
 {
-    private readonly string ordersPath;
-    private readonly string foodItemsPath;
-    private readonly string usersPath; // 🔥 ADD
-
-    public OrderService()
+   public Order PlaceOrder(CreateOrderRequest request, string userEmail)
     {
-        var basePath = Directory.GetCurrentDirectory();
+        // 🔥 STEP 1: CHECK RESTAURANT STATUS
+        var restaurant = FakeDb.Restaurants
+            .FirstOrDefault(r =>r.Id == request.RestaurantId);
 
-        ordersPath = Path.Combine(basePath, "Data", "orders.json");
-        foodItemsPath = Path.Combine(basePath, "Data", "fooditems.json");
-        usersPath = Path.Combine(basePath, "Data", "users.json"); // 🔥 ADD
-    }
+        if (restaurant == null)
+            throw new Exception("Restaurant not found");
 
-    // ✅ PLACE ORDER
-    public Order PlaceOrder(CreateOrderRequest request, string userId)
-    {
-        var foodItems = FileHelper.ReadFromFile<FoodItem>(foodItemsPath);
+        if (!restaurant.IsOpen)
+            throw new Exception("Restaurant is currently closed");
 
-        // 🔥 ADD: user profile fetch
-        var users = FileHelper.ReadFromFile<User>(usersPath);
-        var user = users.FirstOrDefault(u => u.Email == userId);
-
-        var orderItems = new List<OrderItem>();
-        decimal totalAmount = 0;
-
-        foreach (var item in request.Items)
+        // 🔥 STEP 2: CONTINUE ORDER
+        var nextId = "ORD" + DateTime.Now.Ticks.ToString().Substring(10);
+        
+        var order = new Order
         {
-            var food = foodItems.FirstOrDefault(f => f.Id == item.FoodItemId);
+            Id = nextId,
+            UserId = userEmail,
+            PhoneNumber = request.PhoneNumber,
+            Address = request.Address,
+           RestaurantId = request.RestaurantId,
+            OrderDate = DateTime.Now,
+            Status = "Placed",
+            Items = request.Items.Select(i => {
+                var foodItem = FakeDb.FoodItems.FirstOrDefault(f => f.Id == i.FoodItemId);
+                return new OrderItem
+                {
+                    FoodItemId = i.FoodItemId,
+                    Quantity = i.Quantity,
+                    UnitPrice = foodItem?.Price ?? 0,   
+                    FoodName = foodItem?.Name ?? "Unknown"
+                };
+            }).ToList()
+        };
 
-            if (food == null)
-                throw new Exception($"Food item {item.FoodItemId} not found");
+        order.TotalAmount = order.Items.Sum(i => i.UnitPrice * i.Quantity);
 
-            var itemTotal = food.Cost * item.Quantity;
-            totalAmount += itemTotal;
+        FakeDb.Orders.Add(order);
+        FakeDb.SaveOrdersToFile();
 
-            orderItems.Add(new OrderItem
-            {
-                FoodItemId = food.Id,
-                Quantity = item.Quantity,
-                UnitCost = food.Cost
-            });
-        }
+        return order;
+}
 
-        // 🔥 UPDATED LOGIC (PROFILE + OVERRIDE + TEMP)
-        var finalAddress = !string.IsNullOrWhiteSpace(request.Address)
-            ? request.Address
-            : user?.Address ?? "Chennai, T Nagar";
-
-        var finalPhone = !string.IsNullOrWhiteSpace(request.PhoneNumber)
-            ? request.PhoneNumber
-            : user?.PhoneNumber ?? "9876543210";
-
-        var newOrder = new Order
+   public List<Order> GetMyOrders(string email)
 {
-    Id = $"ORD{DateTime.Now.Ticks}",
-    UserId = userId,
+    return FakeDb.Orders
+        .Where(o => o.UserId.Equals(email, StringComparison.OrdinalIgnoreCase))
+        .OrderByDescending(o => o.OrderDate)   
+        .ToList();
+}
 
-    PhoneNumber = finalPhone,
-    Address = finalAddress,
-
-    RestaurantId = request.RestaurantId, // 🔥 ADD THIS
-
-    TotalAmount = totalAmount,
-    Status = "Placed",
-    OrderDate = DateTime.Now,
-    Items = orderItems
-};
-
-        var orders = FileHelper.ReadFromFile<Order>(ordersPath);
-        orders.Add(newOrder);
-        FileHelper.WriteToFile(ordersPath, orders);
-
-        return newOrder;
-    }
-
-    // ✅ GET MY ORDERS (USER)
-    public List<Order> GetMyOrders(string userId)
-    {
-        var orders = FileHelper.ReadFromFile<Order>(ordersPath);
-        return orders.Where(o => o.UserId == userId).ToList();
-    }
-
-    // ✅ GET ALL ORDERS (ADMIN)
-   public List<Order> GetAllOrders(string userEmail, string role)
+  public List<Order> GetAllOrders(string email, string role)
 {
-    var orders = FileHelper.ReadFromFile<Order>(ordersPath);
+    var orders = FakeDb.Orders;
 
     if (role == "SuperAdmin")
+    {
         return orders;
+    }
 
     if (role == "Admin")
     {
-        var adminRestaurantId = "1"; // map later properly
-        return orders.Where(o => o.RestaurantId == adminRestaurantId).ToList();
+        var user = FakeDb.Users
+            .FirstOrDefault(u => u.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
+
+        var adminRestaurantId = user?.RestaurantId ?? 0;
+
+        return orders
+            .Where(o => o.RestaurantId == adminRestaurantId)
+            .ToList();
     }
 
     return new List<Order>();
 }
 
-    // ✅ GET ORDER BY ID
-    public Order GetOrderById(string orderId)
+    public Order UpdateOrderStatus(string orderId, string status)
     {
-        var orders = FileHelper.ReadFromFile<Order>(ordersPath);
-        return orders.FirstOrDefault(o => o.Id == orderId);
-    }
+        var order = FakeDb.Orders.FirstOrDefault(o => o.Id == orderId);
+        if (order == null) throw new Exception("Order not found");
 
-    // ✅ UPDATE ORDER STATUS (ADMIN)
-    public Order UpdateOrderStatus(string orderId, string newStatus)
-    {
-        var orders = FileHelper.ReadFromFile<Order>(ordersPath);
-
-        var order = orders.FirstOrDefault(o => o.Id == orderId);
-
-        if (order == null)
-            throw new Exception("Order not found");
-
-        if (!IsValidStatusTransition(order.Status, newStatus))
-            throw new Exception("Invalid status transition");
-
-        order.Status = newStatus;
-
-        FileHelper.WriteToFile(ordersPath, orders);
+        order.Status = status;
+        FakeDb.SaveOrdersToFile();
 
         return order;
-    }
-
-    // ✅ STATUS FLOW VALIDATION
-    private bool IsValidStatusTransition(string current, string next)
-    {
-        return current switch
-        {
-            "Placed" => next == "Preparing" || next == "Cancelled",
-            "Preparing" => next == "Delivered" || next == "Cancelled",
-            "Delivered" => false,
-            "Cancelled" => false,
-            _ => false
-        };
     }
 }

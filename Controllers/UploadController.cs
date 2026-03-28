@@ -16,7 +16,6 @@ public class UploadController : ControllerBase
         _env = env;
     }
 
-    // ✅ Upload Restaurant Image
     [HttpPost("restaurant")]
     [Consumes("multipart/form-data")]
     [ProducesResponseType(typeof(ApiResponse<object>), 200)]
@@ -44,7 +43,6 @@ public class UploadController : ControllerBase
         return Ok(ApiResponse<object>.SuccessResponse(new { imageUrl }, "Restaurant image uploaded successfully"));
     }
 
-    // ✅ Upload FoodItem Image
     [HttpPost("fooditem")]
     [Consumes("multipart/form-data")]
     [ProducesResponseType(typeof(ApiResponse<object>), 200)]

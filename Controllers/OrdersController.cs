@@ -18,8 +18,6 @@ public class OrdersController : ControllerBase
         _orderService = new OrderService();
     }
 
-    // ✅ PLACE ORDER (USER ONLY)
-    
     [HttpPost]
     [Authorize(Roles = "User")]
     public IActionResult PlaceOrder([FromBody] CreateOrderRequest request)
@@ -38,7 +36,6 @@ public class OrdersController : ControllerBase
         }
     }
 
-    // ✅ GET MY ORDERS (USER)
     [HttpGet("my")]
     [Authorize(Roles = "User")]
     public IActionResult GetMyOrders()
@@ -50,7 +47,6 @@ public class OrdersController : ControllerBase
         return Ok(orders);
     }
 
-    // ✅ GET ALL ORDERS (ADMIN ONLY)
     [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpGet("all")]
     public IActionResult GetAllOrders()
@@ -63,7 +59,6 @@ public class OrdersController : ControllerBase
     return Ok(orders);
     }
 
-    // ✅ UPDATE STATUS (ADMIN ONLY)
     [Authorize(Roles = "Admin,SuperAdmin")]
     [HttpPut("{orderId}/status")]
     public IActionResult UpdateStatus(string orderId, [FromQuery] string status)

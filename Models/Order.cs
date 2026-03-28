@@ -8,10 +8,9 @@ public class Order
 
     public string UserId { get; set; } = string.Empty;
 
-    public string PhoneNumber { get; set; } = string.Empty;   // ✅ ADD
-    public string Address { get; set; } = string.Empty;       // ✅ ADD
-    public int RestaurantId { get; set; }  // 🔥 ADD THIS
-
+    public string PhoneNumber { get; set; } = string.Empty;
+    public string Address { get; set; } = string.Empty;
+    public int RestaurantId { get; set; }
     public decimal TotalAmount { get; set; }
 
     public string Status { get; set; } = "Placed";

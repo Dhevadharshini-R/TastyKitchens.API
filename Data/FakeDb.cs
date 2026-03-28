@@ -8,11 +8,18 @@ public static partial class FakeDb
     public static List<Restaurant> Restaurants = new List<Restaurant>();
     public static List<FoodItem> FoodItems = new List<FoodItem>();
     public static List<User> Users = new List<User>();
+    public static List<Order> Orders = new List<Order>();
 
     static FakeDb()
     {
         LoadData();
     }
+
+    private static readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        WriteIndented = true
+    };
 
     private static void LoadData()
     {
@@ -24,7 +31,14 @@ public static partial class FakeDb
             if (File.Exists(usersPath))
             {
                 var json = File.ReadAllText(usersPath);
-                Users = JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
+                Users = JsonSerializer.Deserialize<List<User>>(json, _jsonOptions) ?? new List<User>();
+            }
+
+            string ordersPath = Path.Combine(dataPath, "orders.json");
+            if (File.Exists(ordersPath))
+            {
+                var json = File.ReadAllText(ordersPath);
+                Orders = JsonSerializer.Deserialize<List<Order>>(json, _jsonOptions) ?? new List<Order>();
             }
             
 
@@ -34,13 +48,13 @@ public static partial class FakeDb
             if (File.Exists(foodItemsPath))
             {
                 var json = File.ReadAllText(foodItemsPath);
-                FoodItems = JsonSerializer.Deserialize<List<FoodItem>>(json) ?? new List<FoodItem>();
+                FoodItems = JsonSerializer.Deserialize<List<FoodItem>>(json, _jsonOptions) ?? new List<FoodItem>();
             }
 
             if (File.Exists(restaurantsPath))
             {
                 var json = File.ReadAllText(restaurantsPath);
-                Restaurants = JsonSerializer.Deserialize<List<Restaurant>>(json) ?? new List<Restaurant>();
+                Restaurants = JsonSerializer.Deserialize<List<Restaurant>>(json, _jsonOptions) ?? new List<Restaurant>();
             }
         }
         catch (Exception ex)
@@ -60,10 +74,7 @@ public static partial class FakeDb
 
             string foodItemsPath = Path.Combine(dataPath, "foodItems.json");
 
-            var json = JsonSerializer.Serialize(FoodItems, new JsonSerializerOptions
-            {
-                WriteIndented = true
-            });
+            var json = JsonSerializer.Serialize(FoodItems, _jsonOptions);
 
             File.WriteAllText(foodItemsPath, json);
         }
@@ -89,10 +100,7 @@ public static partial class FakeDb
 
         string restaurantsPath = Path.Combine(dataPath, "restaurants.json");
 
-        var json = JsonSerializer.Serialize(Restaurants, new JsonSerializerOptions
-        {
-            WriteIndented = true
-        });
+        var json = JsonSerializer.Serialize(Restaurants, _jsonOptions);
 
         File.WriteAllText(restaurantsPath, json);
     }
@@ -118,10 +126,7 @@ public static partial class FakeDb
 
             string usersPath = Path.Combine(dataPath, "users.json");
 
-            var json = JsonSerializer.Serialize(Users, new JsonSerializerOptions
-            {
-                WriteIndented = true
-            });
+            var json = JsonSerializer.Serialize(Users, _jsonOptions);
 
             File.WriteAllText(usersPath, json);
         }
@@ -134,5 +139,28 @@ public static partial class FakeDb
     public static void SaveUsersToFile()
     {
         SaveUsers();
+    }
+
+    private static void SaveOrders()
+    {
+        try
+        {
+            string dataPath = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+            if (!Directory.Exists(dataPath))
+                Directory.CreateDirectory(dataPath);
+
+            string ordersPath = Path.Combine(dataPath, "orders.json");
+            var json = JsonSerializer.Serialize(Orders, _jsonOptions);
+            File.WriteAllText(ordersPath, json);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving orders: {ex.Message}");
+        }
+    }
+
+    public static void SaveOrdersToFile()
+    {
+        SaveOrders();
     }
 }

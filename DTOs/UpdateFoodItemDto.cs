@@ -9,7 +9,7 @@ public class UpdateFoodItemDto
 
     [Required]
     [Range(1, 10000)]
-    public required int Cost { get; set; }
+    public required int Price { get; set; }
 
     [Required]
     public required string ImageUrl { get; set; }
