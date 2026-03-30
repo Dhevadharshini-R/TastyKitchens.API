@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "id": 1,
     "restaurantId": 1,
@@ -706,8 +706,8 @@
     "restaurantId": 20,
     "name": "Minestrone Soup",
     "price": 190,
-    "isVeg": true,
     "rating": 4.3,
+    "isVeg": true,
     "imageUrl": "https://res.cloudinary.com/dpruei0br/image/upload/v1773716290/Minestrone_Soup_x0adsl.jpg"
   },
   {

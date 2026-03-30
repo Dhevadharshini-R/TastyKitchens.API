@@ -1,5 +1,3 @@
-namespace TastyKitchens.API.Models;
-
 public class User
 {
     public int Id { get; set; }
@@ -9,4 +7,5 @@ public class User
     public string Role { get; set; }
     public string PhoneNumber { get; set; } = string.Empty;
     public string Address { get; set; } = string.Empty;
+    public int RestaurantId { get; set; }
 }

@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "id": 1,
     "name": "McDonald\u0027s",
@@ -9,7 +9,7 @@
     "deliveryTime": "30 mins",
     "distance": "2.1 km",
     "isOpen": false,
-    "rating": 4.5,
+    "rating": 5,
     "totalReviews": 132
   },
   {
@@ -60,8 +60,8 @@
     "costForTwo": 600,
     "deliveryTime": "35 mins",
     "distance": "3.2 km",
-    "isOpen": true,
-    "rating": 4.5,
+    "isOpen": false,
+    "rating": 4.7,
     "totalReviews": 973
   },
   {
